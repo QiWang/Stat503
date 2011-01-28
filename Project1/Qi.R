@@ -1,49 +1,74 @@
  #Load  data, the 'bb-2009-all-correct TOT calculated.csv' is the one no duplicats, just 408 observation with 2 players have two position in total
-NBA<-read.csv('bb-2009-all-correct.csv')
+bb<-read.csv('bb-2009-all-correct.csv')
 
 #Generate_Statistics
-fgprct<-NBA$fgm/NBA$fga
-ftprct<-NBA$ftm/NBA$fga
-tpprct<-NBA$tpm/NBA$tpa
+fgprct<-bb$fgm/bb$fga
+ftprct<-bb$ftm/bb$fga
+tpprct<-bb$tpm/bb$tpa
+minpergame<-bb$minutes/bb$gp
+
+tpmpergame<-bb$tpm/bb$gp
+
+fgmpergame<-bb$fgm/bb$gp
+
 
 #Summary
-summary(NBA)
+summary(bb)
 
 
 library(ggplot2)
-## get started with tons of plots and tables...
-qplot(NBA$salary,data=NBA,geom="histogram",xlab="salary",breaks=seq(0,23000000,500000))
-qplot(minutes, salary, data = NBA, geom = c('point', 'smooth'))
-qplot(asts, salary, data = NBA, geom = c('point', 'smooth'))
-qplot(pf, salary, data = NBA, geom = c('point', 'smooth'))
-qplot(reb, salary, data = NBA, geom = c('point', 'smooth'))
+## Initial Exploration Plots
+qplot(bb$salary,data=bb,geom="histogram",xlab="salary",breaks=seq(0,23000000,500000))
+#As expected, the salary histogram is severely skewed to the right. The range of salaries is very large, and often there are only a few key players to a team
+qplot(minutes, salary, data = bb, geom = c('point', 'smooth'))
+qplot(asts, salary, data = bb, geom = c('point', 'smooth'))
+qplot(pf, salary, data = bb, geom = c('point', 'smooth'))
+qplot(reb, salary, data = bb, geom = c('point', 'smooth'))
 
 ## Plots by position
-qplot(NBA$salary,data=NBA,geom="histogram",xlab="salary",breaks=seq(0,23000000,500000),facets = position~.)
-qplot(position, salary,data=NBA,geom="boxplot")
-qplot(minutes, salary, data = NBA,facets = position~.)
-qplot(asts, salary, data = NBA,facets = position~.)
-qplot(reb, salary, data = NBA, facets = position~.)
+qplot(bb$salary,data=bb,geom="histogram",xlab="salary",breaks=seq(0,23000000,500000),facets = position~.)
+qplot(position, salary,data=bb,geom="boxplot")
+qplot(minutes, salary, data = bb,facets = position~.)
+qplot(asts, salary, data = bb,facets = position~.)
+qplot(reb, salary, data = bb, facets = position~.)
 
 ## plots by team
-qplot(minutes, salary, data = NBA, geom = c('point', 'smooth'), facets=~team)
-qplot(pts, salary, data = NBA, geom = c('point', 'smooth'), facets=~team)
-qplot(fgm/fga, salary, data = NBA, geom = c('point', 'smooth'), facets=~team)
-qplot(reb, salary, data = NBA, geom = c('point', 'smooth'), facets=~team)
+qplot(minutes, salary, data = bb, geom = c('point', 'smooth'), facets=~team)
+qplot(pts, salary, data = bb, geom = c('point', 'smooth'), facets=~team)
+qplot(fgm/fga, salary, data = bb, geom = c('point', 'smooth'), facets=~team)
+qplot(reb, salary, data = bb, geom = c('point', 'smooth'), facets=~team)
 
 
 
-# Regreession
-NBA_allfit <- lm(salary~gp+minutes+pts+oreb+dreb+reb+asts+stl+blk+turnover+pf+fga+fgm+fta+ftm+tpa+tpm,data=NBA)
-summary(NBA_allfit)
+# Regression
 
-NBA_rebfit <- lm(salary~minutes,data=NBA)
-summary(NBA_rebfit)
+summary(lm(salary~minutes+position+fgm+fga+ftm+fta+tpm+tpm+tpprct+fgprct+ftprct+minpergame+tpmpergame+fgmpergame,data=bb))
 
-NBA_tpmfit <- lm(salary~asts,data=NBA)
-summary(NBA_tpmfit)
+summary(lm(salary~gp + minutes + position + pts + oreb + dreb + reb + 
+    asts + stl + blk + turnover + pf + fga + fgm + fta + ftm + 
+    tpa + tpm + minpergame + tpmpergame + fgmpergame, data = bb))
 
-NBA_6fit <- lm(salary~minutes+gp+oreb+dreb+asts+stl+turnover,data=NBA)
-summary(NBA_6fit)
+bb_rebfit <- lm(salary~minutes,data=bb)
+summary(bb_rebfit)
+
+bb_tpmfit <- lm(salary~asts,data=bb)
+summary(bb_tpmfit)
+
+summary(lm(salary~position,data=bb))
+
+summary(lm(salary~dreb,data=bb))
+
+summary(lm(salary~dreb,data=bb))
+
+summary(lm(salary~fta,data=bb))
+
+summary(lm(salary~minpergame,data=bb))
+
+summary(lm(salary~fgmpergame,data=bb))
+
+summary(lm(salary~tpmpergame,data=bb))
+
+bb_6fit <- lm(salary~minpergame+gp+oreb+dreb+asts+stl+turnover,data=bb)
+summary(bb_6fit)
 
 # model searching
