@@ -32,7 +32,7 @@ qplot(reb, salary, data = bb, geom = c('point', 'smooth'))
 ## Plots by position
 qplot(salary,data=bb,facets = position~.)
 qplot(position, salary,data=bb,geom="boxplot")
-qplot(minpergame, salary, data = bb,facets = position~.)
+qplot(minutes/gp, log(salary), data = bb,facets = position~.,geom=c('point','smooth'))
 #accross all of the positions we see a general increasing increase in salary as minutes per game increases.  The most sensitive position is guard.  It is possible that the reason for this is that guards who can stay in a game longer are more valuable.  Endurance may not be as important for a player that moves less, like the center.
 qplot(asts, salary, data = bb,facets = position~.)
 #The first thing we see here is that salary is clearly possitively correlated to assists.  The second attention grabbing detail is the likelihood of guards to have more assists than the other two possitions.  Third, it appears that there are two groups of centers.  The reason for this split is not very clear. Finally, there exists one forward who is a clear outlier for the number of assists he makes.  If the value of a player is well represented by this correlation, perhaps scouts should seek out this player.
