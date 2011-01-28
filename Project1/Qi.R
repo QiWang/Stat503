@@ -18,7 +18,7 @@ summary(bb)
 
 library(ggplot2)
 ## Initial Exploration Plots
-qplot(bb$salary,data=bb,geom="histogram",xlab="salary",breaks=seq(0,23000000,500000))
+print(qplot(salary,data=bb))
 #As expected, the salary histogram is severely skewed to the right. The range of salaries is very large, and often there are only a few key players to a team
 qplot(minutes, salary, data = bb, geom = c('point', 'smooth'))
 #Here we will start to see a trend that is common throughout this dataset, which is high variance.  The increase in salary as a function of the minutes played is true on average, but very uncertain for prediction.  It is important to note that the corelation is linear.
