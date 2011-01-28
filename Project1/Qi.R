@@ -44,7 +44,7 @@ qplot(minutes, salary, data = bb, geom = c('point', 'smooth'), facets=~team)
 qplot(pts, salary, data = bb, geom = c('point', 'smooth'), facets=~team)
 qplot(tpm/tpa, salary, data = bb, geom = c('point', 'smooth'), facets=~team)
 qplot(reb, salary, data = bb, geom = c('point', 'smooth'), facets=~team)
-#From these plots it is clear that there is a large variance in team strategy.  Some teams have many similar salaried players, while some have one to three players that have a much greater salary. 
+#From these plots it is clear that there is a large variance in team strategy.  Some teams have many similar salaried players, while some have one to three players that have a much greater salary.
 #From the points plot for Washington, it is clear that they have one player that is significantly underpaid.  Perhaps a scout should keep an eye on this player.
 
 # Regression
