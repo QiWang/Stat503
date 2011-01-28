@@ -1,6 +1,9 @@
 source('preprocess.R')
 
 plotmatrix(bb[, -c(1:4)])
+plotmatrix(bb[, 5:12])
+
+bb$mpg = bb$minutes/bb$gp
 
 fit = lm(salary ~ . - reb - tpm, data = subset(bb, select = team:salary))
 fit.coef = coef(summary(fit))
