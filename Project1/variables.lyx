@@ -1,0 +1,158 @@
+#LyX 1.6.8 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+The variables recorded are:
+\backslash
+
+\backslash
+ lastname
+\backslash
+
+\backslash
+ firstname
+\backslash
+
+\backslash
+ salary
+\backslash
+
+\backslash
+ position
+\backslash
+
+\backslash
+ ilkid (an id)
+\backslash
+
+\backslash
+ year (all are 2009)
+\backslash
+
+\backslash
+ team
+\backslash
+
+\backslash
+ leag
+\backslash
+
+\backslash
+ gp (games played)
+\backslash
+
+\backslash
+ minutes (minutes played)
+\backslash
+
+\backslash
+ oreb (offensive rebounds)
+\backslash
+
+\backslash
+ dreb (defensive rebounds)
+\backslash
+
+\backslash
+ reb (total rebounds)
+\backslash
+
+\backslash
+ asts (assists)
+\backslash
+
+\backslash
+ stl (steals)
+\backslash
+
+\backslash
+ blk (blocks)
+\backslash
+
+\backslash
+ turnover (loss of ball possession)
+\backslash
+
+\backslash
+ pf (personal fouls)
+\backslash
+
+\backslash
+ fga (two-point shots attempted)
+\backslash
+
+\backslash
+ fgm (two-point shots made)
+\backslash
+
+\backslash
+ fta (free throws attempted)
+\backslash
+
+\backslash
+ ftm (free throws made)
+\backslash
+
+\backslash
+ tpa (three-point shots attempted)
+\backslash
+
+\backslash
+ tpm (three-point shots made)
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
