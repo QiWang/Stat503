@@ -21,16 +21,23 @@ library(ggplot2)
 qplot(bb$salary,data=bb,geom="histogram",xlab="salary",breaks=seq(0,23000000,500000))
 #As expected, the salary histogram is severely skewed to the right. The range of salaries is very large, and often there are only a few key players to a team
 qplot(minutes, salary, data = bb, geom = c('point', 'smooth'))
+#Here we will start to see a trend that is common throughout this dataset, which is high variance.  The increase in salary as a function of the minutes played is true on average, but very uncertain for prediction.  It is important to note that the corelation is linear.
 qplot(asts, salary, data = bb, geom = c('point', 'smooth'))
+#This plot exposes a high density of players with fewer assists.  It appears that there is a strong positive correlation when assists are fewer than 200.  After this point the variance increases greatly and correlation is decreased to almost zero.  This makes intuitive sense, because the less dominate players will likely get paid more if they are good support for the higher paid players. Likewise, higher paid players generally should be scoring points and having fewer assists.  This is shown by the triangular shape of the scatterplot.  
 qplot(pf, salary, data = bb, geom = c('point', 'smooth'))
+#Since some personal fouls can be strategic and others are mistakes of tempermental players, it is not surprising that this data has a large variace. Since some positions might have more strategic reason to foul, it may be interesting to observe this plot seperated by possition type. 
 qplot(reb, salary, data = bb, geom = c('point', 'smooth'))
+#Once again, this statistic is very dependent on the position.  Although we see a possitive correlation here, we expect that the possition specific plots will be more clear.
 
 ## Plots by position
 qplot(bb$salary,data=bb,geom="histogram",xlab="salary",breaks=seq(0,23000000,500000),facets = position~.)
 qplot(position, salary,data=bb,geom="boxplot")
-qplot(minutes, salary, data = bb,facets = position~.)
+qplot(minpergame, salary, data = bb,facets = position~.)
+#accross all of the positions we see a general increasing increase in salary as minutes per game increases.  The most sensitive position is guard.  It is possible that the reason for this is that guards who can stay in a game longer are more valuable.  Endurance may not be as important for a player that moves less, like the center.
 qplot(asts, salary, data = bb,facets = position~.)
+#The first thing we see here is that salary is clearly possitively correlated to assists.  The second attention grabbing detail is the likelihood of guards to have more assists than the other two possitions.  Third, it appears that there are two groups of centers.  The reason for this split is not very clear. Finally, there exists one forward who is a clear outlier for the number of assists he makes.  If the value of a player is well represented by this correlation, perhaps scouts should seek out this player.
 qplot(reb, salary, data = bb, facets = position~.)
+#It is clear that forwards and centers have the highest frequency of players with lots of rebounds.  The correlation amongst all possitions is similar and not very strong.
 
 ## plots by team
 qplot(minutes, salary, data = bb, geom = c('point', 'smooth'), facets=~team)
