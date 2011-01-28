@@ -1,3 +1,7 @@
+source('preprocess.R')
+
+plotmatrix(bb[, -c(1:4)])
+
 fit = lm(salary ~ . - reb - tpm, data = subset(bb, select = team:salary))
 fit.coef = coef(summary(fit))
 fit.coef[fit.coef[, 4] < .1, ]
