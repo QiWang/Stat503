@@ -25,7 +25,7 @@ qplot(minutes, salary, data = bb, geom = c('point', 'smooth'))
 qplot(asts, salary, data = bb, geom = c('point', 'smooth'))
 #This plot exposes a high density of players with fewer assists.  It appears that there is a strong positive correlation when assists are fewer than 200.  After this point the variance increases greatly and correlation is decreased to almost zero.  This makes intuitive sense, because the less dominate players will likely get paid more if they are good support for the higher paid players. Likewise, higher paid players generally should be scoring points and having fewer assists.  This is shown by the triangular shape of the scatterplot.
 qplot(pf, salary, data = bb, geom = c('point', 'smooth'))
-#Since some personal fouls can be strategic and others are mistakes of tempermental players, it is not surprising that this data has a large variace. Since some positions might have more strategic reason to foul, it may be interesting to observe this plot seperated by possition type. 
+#Since some personal fouls can be strategic and others are mistakes of temperamental players, it is not surprising that this data has a large variace. Since some positions might have more strategic reason to foul, it may be interesting to observe this plot seperated by possition type.
 qplot(reb, salary, data = bb, geom = c('point', 'smooth'))
 #Once again, this statistic is very dependent on the position.  Although we see a possitive correlation here, we expect that the possition specific plots will be more clear.
 
