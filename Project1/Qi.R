@@ -1,5 +1,5 @@
  #Load  data, the 'bb-2009-all-correct TOT calculated.csv' is the one no duplicats, just 408 observation with 2 players have two position in total
-bb<-read.csv('bb-2009-all-correct.csv')
+source('preprocess.R')
 
 #Generate_Statistics
 fgprct<-bb$fgm/bb$fga
