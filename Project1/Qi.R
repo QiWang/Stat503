@@ -51,8 +51,8 @@ qplot(reb, salary, data = bb, geom = c('point', 'smooth'), facets=~team)
 
 summary(lm(salary~minutes+position+fgm+fga+ftm+fta+tpm+tpm+tpprct+fgprct+ftprct+minpergame+tpmpergame+fgmpergame,data=bb))
 
-summary(lm(salary~gp + minutes + position + pts + oreb + dreb + reb + 
-    asts + stl + blk + turnover + pf + fga + fgm + fta + ftm + 
+summary(lm(salary~gp + minutes + position + pts + oreb + dreb + reb +
+    asts + stl + blk + turnover + pf + fga + fgm + fta + ftm +
     tpa + tpm + minpergame + tpmpergame + fgmpergame, data = bb))
 
 bb_rebfit <- lm(salary~minutes,data=bb)
