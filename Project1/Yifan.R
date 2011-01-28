@@ -20,21 +20,21 @@ bb$tpp <- bb$tpm/bb$tpa
 
 qplot(minutes,salary,data=bb)
 
-#From this plot we can find that as the minutes goes up, players' salary is also moving up.
+#From this plot we can find that as minutes go up, players' salary is also moving up.
 #But it looks not that much linerly correlated.
-#The first reason can be: "different teams have different level of salary".
-#We decide to add team in the plot.
+#The first reason can be: "different teams have different levels of salary".
+#We decide to add "team" as a factor in the plot.
 
 qplot(minutes,salary,data=bb,facets=~team)
 
-#Adding team to the plot makes the plot looks better, but we can still see some points in the middle of x-axe with a high y-axe position which reflecting that there are some players playing less total minutes in a season with a higher salary.
-#We guess the reason can be "some players can not finish the whole season's game because of some trouble".
-#We decide to use minutes/game so that this problem might be ignored.
+#Adding team to the plot makes the plot better, but we can still see some points in the middle of x-axe with a high y-axe position which reflecting that there are some players playing less in total minutes in the season with a higher salary.
+#We guess the reason can be "some players can not finish the whole season's games because of some trouble".
+#We decide to use "minutes/game" instead of "minutes" so that this problem might be ignored.
 
 qplot(minutes/gp,salary,data=bb,facets=~team)
 
 #Finally the plot is much better.
-#Overall we can find that as minutes/game goes up, the players salaty is increasing.
+#Overall we can find that as minutes/game increases, the players salaty is increasing.
 #There are some players still playing less with higher salary and some playing more with low salary.
 
 
