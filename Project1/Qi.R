@@ -30,7 +30,7 @@ qplot(reb, salary, data = bb, geom = c('point', 'smooth'))
 #Once again, this statistic is very dependent on the position.  Although we see a possitive correlation here, we expect that the possition specific plots will be more clear.
 
 ## Plots by position
-qplot(bb$salary,data=bb,geom="histogram",xlab="salary",breaks=seq(0,23000000,500000),facets = position~.)
+qplot(salary,data=bb,facets = position~.)
 qplot(position, salary,data=bb,geom="boxplot")
 qplot(minpergame, salary, data = bb,facets = position~.)
 #accross all of the positions we see a general increasing increase in salary as minutes per game increases.  The most sensitive position is guard.  It is possible that the reason for this is that guards who can stay in a game longer are more valuable.  Endurance may not be as important for a player that moves less, like the center.
