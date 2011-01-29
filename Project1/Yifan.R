@@ -31,7 +31,7 @@ qplot(minutes,salary,data=bb,facets=~team)
 #We guess the reason can be "some players can not finish the whole season's games because of some trouble".
 #We decide to use "minutes/game" instead of "minutes" so that this problem might be ignored.
 
-qplot(minutes/gp,salary,data=bb,facets=~team)
+qplot(minutes/gp,log(salary),data=bb,facets=~team,geom=c('point','smooth'))
 
 #Finally the plot is much better.
 #Overall we can find that as minutes/game increases, the players salaty is increasing.
@@ -40,7 +40,7 @@ qplot(minutes/gp,salary,data=bb,facets=~team)
 
 ##Plot, Points
 
-qplot(pts/gp,salary,data=bb,facets=~team)
+qplot(pts/gp,log(salary),data=bb,facets=~team,geom=c('point','smooth'))
 
 #Following the experience, we make the plot of points/game vs salary by teams.
 #From the plot, we can see that as the points/game goes up, the players salary in increasing, especially for the top attackers in each team, their salary will be the top of the team.
@@ -48,9 +48,9 @@ qplot(pts/gp,salary,data=bb,facets=~team)
 
 ##Plot, fgp ftp tpp
 
-qplot(fgp,salary,data=bb,facets=~team)
-qplot(ftp,salary,data=bb,facets=~team)
-qplot(tpp,salary,data=bb,facets=~team)
+qplot(fgp,log(salary),data=bb,facets=~team,geom=c('point','smooth'),xlim=c(.3,.7),ylim=c(10,18))
+qplot(ftp,log(salary),data=bb,facets=~team,geom=c('point','smooth'))
+qplot(tpp,log(salary),data=bb,facets=~team,geom=c('point','smooth'))
 
 #By looking at the these plots, we can find that most of the players have the similar percentage of shooting. So, it is really haed to say if there is any certain linear correlations from the plots.
 
