@@ -28,7 +28,7 @@ summary(fit2<-step(update(fit, log(salary)~.), trace=0))
 par(mfrow=c(1,2))
 plot(fit2, which=1:2)
 
-anova(fit3<-lm(log(salary)~.,data=na.omit(subset(bb, select=c(salary, team, position, fgp:top)))))
+anova(fit3<-lm(log(salary)~.,data=na.omit(subset(bb, select=c(salary, team, position, mpg:top)))))
 summary(fit4<-step(fit3, trace=0))
 
 par(mfrow=c(1,2))
