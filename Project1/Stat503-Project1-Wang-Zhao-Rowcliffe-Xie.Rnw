@@ -1,0 +1,650 @@
+\batchmode
+\makeatletter
+\def\input@path{{/home/yihui/Downloads/Stat503/Project1//}}
+\makeatother
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{babel}
+
+\usepackage{url}
+\usepackage[authoryear]{natbib}
+\usepackage[unicode=true, pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview=FitH}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newenvironment{dummy}{\par}{\par}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage[nogin]{Sweave}
+\usepackage{tikz}
+\renewcommand{\rmdefault}{ppl}
+\renewcommand{\sfdefault}{aess}
+\renewcommand{\ttdefault}{aett}
+
+\makeatother
+
+\begin{document}
+\SweaveOpts{tidy=TRUE,pdf=FALSE,eps=FALSE,tikz=TRUE,external=TRUE,prefix.string=figure/Rfig}
+\begin{dummy}
+<<setup,echo=FALSE>>=
+
+options(width=85,useFancyQuotes=FALSE)
+
+library(ggplot2)
+
+theme_set(theme_grey(base_size = 9))
+
+@
+\end{dummy}
+
+\title{Stat503 Project 1: Basketball -- Skills and Salary}
+
+
+\author{Qi Wang \and Yifan Zhao \and William Rowcliffe \and Yihui Xie}
+\maketitle
+\begin{abstract}
+In this report, we analyzed a basketball dataset containing statistics
+for NBA players in 2009, and tried to find out important predictors
+for the \texttt{salary} variable. First, we cleaned the dataset, because
+there are 9 players who served in multiple teams during the year 2009;
+then we gave a summary of the dataset, including the univariate distributions
+of some variables, as well as the relationship between salary and
+many other variables such as the minutes played and the field goals
+made and so on; these exploratory attempts gave an indication that
+new variables might be more appropriate in predicting the salary;
+finally we used linear regressions to do the variable selection to
+detect most important predictors.
+\end{abstract}
+
+\section{Introduction}
+
+We are given a dataset which contains NBA player statistics for the
+2008 -- 2009 season, and salaries for the 2009 -- 2010 season. Statistics
+come from the web page \url{http://www.databasebasketball.com/stats download.htm}
+and salaries from \url{http://content.usatoday.com/sportsdata/basketball/nba/salaries/team}.
+The goal is to find out a number of predictors which can best predict
+the salary. Below is a list of variables involved:
+\begin{description}
+\item [{position:}] the position the player played in the team (\texttt{Center},
+\texttt{Forward}, \texttt{Guard}) 
+\item [{team:}] the code for the name of team 
+\item [{gp:}] the number of games the player played 
+\item [{minutes:}] the minutes the player played 
+\item [{oreb:}] the number of offensive rebounds the player made 
+\item [{dreb:}] the number of defensive rebounds the player made 
+\item [{rob:}] the number of rebounds the player made
+\item [{asts:}] the assists the player made 
+\item [{stl:}] the steals the player made
+\item [{blk:}] the blocks the player made 
+\item [{turnover:}] the turnovers the player made
+\item [{pf:}] the personal fouls the player made 
+\item [{fga:}] the field goals the player attempted to make 
+\item [{fgm:}] the field goals the player made
+\item [{fta:}] the free throws the player attempted to make 
+\item [{ftm:}] the free throws the player made
+\item [{tpa:}] the three pointers the player attempted to make 
+\item [{tpm:}] the three pointers the player made
+\end{description}
+
+\section{Data cleaning\label{sec:clean}}
+
+A closer look at the data records revealed that there were 9 players
+who played for more than one team in 2009, for example, Mike Harris
+played in both Houston Rockets and Washington Wizards. All the {}``duplicate''
+records are as follows:
+\begin{dummy}
+<<duplicate-records>>=
+
+bb = read.csv('bb-2009-all-correct.csv')
+
+dup.players = with(bb, ilkid %in% ilkid[duplicated(ilkid)])
+
+bb[dup.players, c(1:3, 5, 25, 26)]
+
+@
+\end{dummy}
+The naturual question is how to deal with these records, and we decided
+to remove them due to 3 reasons:
+\begin{enumerate}
+\item the total sample size is 417, and these records are only a small portion
+of the whole sample;
+\item it is hard to decide whether to add their salaries in different teams
+up or average them or leave them untouched, because we have no clue
+how these salary values came from -- are they what these players actually
+got in 2009 or simply the numbers in their contracts with the teams?
+(we tried to look at the website and the data source remained unclear);
+\item most of their salaries are relatively low, which does not contribute
+much in the salary prediction; Figure \ref{fig:duplicate-plot} shows
+that the salaries of these players do not follow the general pattern
+of \texttt{salary} vs \texttt{minutes}, and we will know later that
+the minutes played in a team is an important predictor for salary,
+so removing them will not affect our prediction much;
+\end{enumerate}
+%
+\begin{figure}
+\begin{dummy}
+<<duplicate-plot,fig=TRUE,width=5,height=3,echo=FALSE>>=
+
+print(qplot(minutes, salary, data = bb, color = factor(dup.players), size=as.integer(dup.players)) + scale_colour_hue('duplicate')+ scale_size(to=c(1,2),legend = FALSE))
+
+@
+\end{dummy}
+\caption{The players who served in more than one team in 2009: a scatter plot
+of \texttt{salary} vs \texttt{minutes}. Note most of these players
+are in the far bottom-left corner.\label{fig:duplicate-plot}}
+
+\end{figure}
+
+
+Now there are 401 records in the cleaned dataset.
+\begin{dummy}
+<<new-data>>=
+
+bb = bb[!dup.players, -c(4, 6, 7)]
+
+dim(bb)
+
+@
+\end{dummy}
+
+\section{A summary of the data\label{sec:summary}}
+
+%
+\begin{figure}
+\begin{dummy}
+<<hist-salary,fig=TRUE,width=4,height=3>>=
+
+print(qplot(salary,data=bb))
+
+@
+\end{dummy}
+\caption{The distribution of salary: the histogram is severely skewed to the
+right. The range of salaries is very large, and often there are only
+a few key players to a team.\label{fig:hist-salary}}
+
+\end{figure}
+
+
+In this section we will give a summary of the dataset. Since our direct
+goal is to predict salary, it is natural to take a look at the distribution
+of the salary in Figure \ref{fig:hist-salary}, which is skewed to
+the right and has a long tail. This may indicate a log-transformation
+of the salary data, and we will see later the effects of transformation.
+
+%
+\begin{figure}
+\begin{dummy}
+<<salary-minutes,fig=TRUE,width=4,height=3>>=
+
+print(qplot(minutes, salary, data = bb, geom = c('point', 'smooth')))
+
+@
+\end{dummy}
+\caption{A scatter plot of \texttt{salary} vs \texttt{minutes} with a smooth
+curve: the relationship looks linear, but there is a change in the
+increase of salary with minutes around $minutes\approx1600$.\label{fig:salary-minutes}}
+
+\end{figure}
+
+
+Figure \ref{fig:salary-minutes} is a scatter plot of \texttt{salary}
+vs \texttt{minutes} with a smooth curve. Here we will start to see
+a trend that is common throughout this dataset, which is high variance.
+The increase in salary as a function of the minutes played is true
+on average, but very uncertain for prediction. It is important to
+note that the correlation is not completely linear. There is a change
+in the increase of salary with minutes around $minutes\approx1600$;
+before that the increase gets slower and slower. This sounds like
+the {}``law of diminishing marginal utility'' in economics. However,
+when the player has played for an enough long time, the speed for
+the increase will be faster again. 
+
+Similarly we can plot salary agaist other variables such as \texttt{asts},
+\texttt{pf} and \texttt{reb}:
+\begin{dummy}
+<<other-salary-plots,eval=FALSE>>=
+
+qplot(asts, salary, data = bb, geom = c('point', 'smooth')) 
+
+qplot(pf, salary, data = bb, geom = c('point', 'smooth')) 
+
+qplot(reb, salary, data = bb, geom = c('point', 'smooth')) 
+
+@
+\end{dummy}
+We will omit the graphics output in this report to save space (the
+reader can reproduce them using the supplementary R code). As a matter
+of fact, we can observe similar trends in these three scatter plots,
+which will be summarized after we briefly describe the three plots.
+
+For the number of assists, the plot exposes a high density of players
+with fewer assists. It appears that there is a strong positive correlation
+when assists are fewer than 200. After this point the variance increases
+greatly and correlation is decreased to almost zero. This makes intuitive
+sense, because the less dominate players will likely get paid more
+if they are good support for the higher paid players. Likewise, higher
+paid players generally should be scoring points and having fewer assists. 
+
+Since some personal fouls can be strategic and others are mistakes
+of temperamental players, it is not surprising that this data has
+a large variace. Since some positions might have more strategic reason
+to foul, it may be interesting to observe this plot seperated by possition
+type. 
+
+Once again, we believe the number of rebounds is very dependent on
+the position. Although we see a possitive correlation in the scatter
+plot of \texttt{salary} vs \texttt{reb}, we expect that the possition
+specific plots will be more clear.
+
+The general pattern is, the salary tends to increase with \texttt{asts},
+\texttt{pf} and \texttt{reb} if we try to examine the bivariate relationship,
+and the increase does not strictly follow a linear pattern -- there
+are {}``change points'' in the regression curves, and there seems
+to be heteroskedasticity, too. We leave these problems to Section
+\ref{sec:regression}.
+
+It will be naive for us to jump to conclusions that players should
+be encouraged to give more assists or make more fouls to earn a high
+salary. The main reason that we observed the positive correlation
+almost everywhere is perhaps all these explanatory variables are positively
+correlated with the experience of a player, which is reflected in
+many variables, such as the number of games played. Apparently, the
+more games one plays, the more experience he will gain, and the more
+assists and fouls he will tend to make. It is tempting to make causal
+inference here, but we must always bear in mind that observational
+data is inappropriate to reveal causality.
+
+A scatter plot matrix would have given a neat illustration on the
+relationship between variables in this dataset, but again we decided
+to omit it in the report. The information/ink ratio is too low: too
+little (unexpected) information is shown in that huge plot.
+\begin{dummy}
+<<scatterplot-matrix, eval=FALSE>>=
+
+## in case the reader be curious about the scatter plot matrix
+
+plotmatrix(bb[, 5:12])
+
+@
+\end{dummy}
+
+\section{A further exploration of variables\label{sec:new-variables}}
+
+%
+\begin{figure}
+\begin{dummy}
+<<salary-position,fig=TRUE,width=4,height=3>>=
+
+print(qplot(position, salary,data=bb,geom="boxplot"))
+
+@
+\end{dummy}
+\caption{Salaries for different positions: the \texttt{Center} seems to have
+better salaries.\label{fig:salary-position}}
+
+\end{figure}
+
+
+%
+\begin{figure}
+\begin{dummy}
+<<salary-minpergp,fig=TRUE,width=4,height=3>>=
+
+print(qplot(minutes/gp, log(salary), data = bb,facets = position~.,geom=c('point','smooth')))
+
+@
+\end{dummy}
+\caption{Log-salaries vs minutes per game for different positions: the relationship
+is much more linear compared to the plot on the original scale, and
+the variance is stabilized as well. Note there is an outlier in the
+guards.\label{fig:salary-minpergp}}
+
+\end{figure}
+
+
+As mentioned in Section \ref{sec:summary}, we may check the relationship
+among variables conditioned on the \texttt{position}. Figure \ref{fig:salary-position}
+are the boxplots of salaries corresponding to each position; we see
+the center has a higher salary on average. Figure \ref{fig:salary-minpergp}
+is a scatter plot of log-salary vs minutes per game for different
+positions. We took the log-transformation because we found the relationship
+became more linear and the variance was also stabilized. The absolute
+number of minutes played might not be an appropriate indicator to
+evaluate a player, for example, some less important players may have
+played for a long time in total but contributed only a little in each
+game, so it is reasonable to calculate the average minutes played
+in each game. Across all of the positions we see a general increase
+in salary with minutes per game. The most sensitive position is guard
+-- they play longer in the game on average (more points clustered
+in the right part). It is possible that the reason for this is that
+guards who can stay in a game longer are more valuable. Endurance
+may not be as important for a player that moves less, like the center.
+Generally speaking, the speed of increase in log-salary is slowest
+for the center and fastest for the forward.
+
+This motivated us to create a new variable \texttt{mpg} (minutes per
+game), which we will consider in Section \ref{sec:regression}.
+\begin{dummy}
+<<mpg-creation>>=
+
+bb$mpg = bb$minutes/bb$gp   # new variable 'mpg'
+
+@
+\end{dummy}
+%
+\begin{figure}
+\begin{dummy}
+<<salary-team,fig=TRUE,width=6,height=6>>=
+
+print(qplot(mpg, log(salary), data = bb, geom = c('point', 'smooth'), facets=~team))
+
+@
+\end{dummy}
+\caption{Scatter plots of log-salary vs minutes per game, conditioned on team.
+The smoothing curves are much more compact than the overall scatter
+plots, and we can take a closer look at each team to see different
+policies on the player's salary, e.g. Cavaliers seem to stick strictly
+to the {}``no pain no gain'' rule, but Lakers might have high salary
+in the beginning, and then they are unable to earn high salary if
+they have not played intensively enough (the salary dropped down in
+the half-way!).\label{fig:salary-team}}
+
+\end{figure}
+
+
+There is another categorical \texttt{team} in the data. We have no
+reason not to look at it. Figure \ref{fig:salary-team} shows the
+relationship between log-salary and minutes per game conditioned on
+\texttt{team}. It revealed a lot of interesting phenomena. For example,
+CLE Cavaliers can earn higher salary with greater \texttt{mpg} --
+the relationship is fairly linear; whereas LAL Lakers do not necessarily
+gain higher salary in the beginning, although their \texttt{mpg} is
+increasing. There are several other interesting teams, such as Boston
+Celtics (BOS), Golden State Warriors (GSW) and New York Knicks (NYK).
+We really feel curious how their salaries were decided, because their
+curves are really {}``wiggly''. There is a player in Washington
+Wizards who was significantly underpaid; perhaps a scout should keep
+an eye on this player.
+
+Should we take the team into account when predicting salaries? The
+answer seems to be {}``definitely!''. However, there is a potential
+danger in doing so, namely overfitting. To put it to an extreme, we
+can make perfect predictions if we divide the data into enough small
+chunks. We decided not to make haste for the time being.
+
+We can observe similar patterns in the scatter plots of log-salary
+vs points per game; the graphics output is omitted.
+\begin{dummy}
+<<salary-points,eval=FALSE>>=
+
+qplot(pts/gp,log(salary),data=bb,facets=~team,geom=c('point','smooth'))
+
+@
+\end{dummy}
+Thus far we have not analyzed the skills of players yet. Field goals,
+free throws and three pointers are most direct indicators to evaluate
+the performace of players. We also learned through web searches that
+the ratio of assists/turnover is an important indicator to measure
+the performance of the guards. This is, however, impractical for our
+dataset, because 1/4 of players had less than 20 turnovers, which
+could make the ratio unreliable. As we are no experts on basketball,
+we finally decided to only calibrate the performace-related variables
+either by \texttt{gp} or by the corresponding total number. For example,
+\texttt{fgm} is calibrated by \texttt{fga} to get field goal percentage
+\texttt{fgp}, and \texttt{reb} is calibrated by \texttt{gp} to get
+rebounds per game \texttt{rep}, and so on.
+\begin{dummy}
+<<performance-pg>>=
+
+bb$fgp = bb$fgm/bb$fga  # filed goals success percentage
+
+bb$ftp = bb$ftm/bb$fta  # free throws success percentage
+
+bb$tpp = bb$tpm/bb$tpa  # 3 pointers success percentage
+
+bb$rep = bb$reb/bb$gp   # rebounds per game
+
+bb$asp = bb$asts/bb$gp  # assists per game
+
+bb$stp = bb$stl/bb$gp   # steals per game
+
+bb$blp = bb$blk/bb$gp   # blocks per game
+
+bb$pfp = bb$pf/bb$gp    # fouls per game
+
+bb$top = bb$turnover/bb$gp  # turnovers per game
+
+@
+\end{dummy}
+
+\section{Variable selection via regressions\label{sec:regression}}
+
+After the preliminary exploration in the data mainly through graphics,
+we will use linear regressions to detect the important variables.
+First we just begin with the original variables, then move on to the
+new variables we created in Section \ref{sec:new-variables}.
+
+A simple linear regression on all the variables will result in an
+obvious problem: the coefficients on \texttt{reb} (rebounds) and \texttt{tpm}
+(three pointers made) are \texttt{NA}'s. The former one is easy to
+explain: $reb=oreb+dreb$ (i.e. perfect colinearity); the latter one
+is more difficult for us to explain, however, we finally found out
+this relationship: $pts=2*fgm+ftm+tpm$. We have no idea on why the
+total points were calculated in this way. It seems that the coefficient
+for \texttt{tpm} should be 3. This could be a disastrous error in
+the data, but it is more likely that we do not know enough about basketball
+statistics.
+
+According to the P-values of the coefficients after we removed \texttt{reb}
+and \texttt{tpm} (which were non-estimable), the most significant
+variables are \texttt{gp}, \texttt{oreb}, \texttt{dreb}, \texttt{asts},
+\texttt{stl} and \texttt{turnover}. 
+\begin{dummy}
+<<lm1>>=
+
+fit = lm(salary ~ . - reb - tpm, data = subset(bb, select = team:salary))
+
+fit.coef = coef(summary(fit))
+
+round(fit.coef[fit.coef[, 4] < .1, ], 2)  # vars with P-value < 0.1
+
+@
+\end{dummy}
+Picking variables merely based on P-values is a bad strategy in variable
+selection, because these P-values could change a lot if we remove
+certain variables from the full regression model. AIC (Akaike Information
+Criterion) is generally a better criterion than P-values to evaluate
+a model, because it takes the complexity of models into account. It
+is reasonable to try a stepwise regression based on AIC, yet we can
+see there is a common problem in both of these two regressions:
+\begin{dummy}
+<<lm1-aic>>=
+
+round(coef(summary(fit1<-step(fit, trace=0))), 2)
+
+@
+\end{dummy}
+We got 11 variables from the stepwise regression. The problem is interpretability,
+which is not uncommon in multiple regressions. For example, it is
+natural for \texttt{turnover} to have a negative coefficient, since
+it indicates the bad performance of a player, but how can we interpret
+that the coefficient for \texttt{gp} (games played) is negative? While
+it might not be totally unreasonable (other variables held constant,
+the more games one played, the lower salary one got), the model is
+either too complicated or contradictory to what we expected.
+
+To suggest the next step to take, we checked the residual plot and
+QQ plot for the above regression (the one from the stepwise regression);
+see the top two plots in Figure \ref{fig:residual-plot}. The residual
+plot indicated that linearity might be a problem, because there is
+curvature in the plot, which should not exist if salary really has
+a linear relationship with other explanatory variables; the QQ plot
+obviously pointed out that there was a severe departure from normality
+for these residuals. Considering the magnitude of the residuals as
+well as these diagnostic plots, we took the log-transformation on
+the salary variable.
+\begin{dummy}
+<<lm1-log>>=
+
+round(coef(summary(fit2<-step(update(fit, log(salary)~.), trace=0)) ), 4)
+
+@
+\end{dummy}
+%
+\begin{figure}
+\begin{dummy}
+<<residual-plot,fig=TRUE,width=5.5,height=5.5,echo=FALSE>>=
+
+par(mfrow=c(2,2),mar=c(4,4,1,.5),mgp=c(2,.9,0))
+
+plot(fit1, which=1:2)
+
+plot(fit2, which=1:2) 
+
+@
+\end{dummy}
+\caption{Residual plots and QQ plots based on the original scale (top) and
+log-transformed (bottom) salary. These plots suggest that a log-transformation
+is desirable. The bottom-left residual plot seems to have a curvature
+in the tail, however, there are too few observations in that part
+to justify that linearity was seriously violated.\label{fig:residual-plot}}
+
+\end{figure}
+
+
+This time we got fewer explanatory variables, and their coefficients
+do not violate commen sense too much. What's more, we do not need
+to worry about the correctness of \texttt{pts}, since it is not in
+the final model. Other variables held constant, it seems defence is
+better than offence in terms of rebounds, and assists can help a player
+get more salary. Among the three positions, the \texttt{Center} earns
+a higher salary than the \texttt{Forward} and \texttt{Guard}.
+
+So far we have been using absolute indicators, i.e. we have not considered
+conditioning one variable on the other. The exploration in Section
+\ref{sec:new-variables} would have been in vain if we do not try
+regressions on the new variables created there. We also need to take
+\texttt{team} and \texttt{position} into consideration. This time
+we are more lucky (perhaps it is due to more meaningful variables):
+\begin{dummy}
+<<new-var-regression>>=
+
+## ANOVA on all the explanatory variables: most are significant
+
+anova(fit3<-lm(log(salary)~.,data=na.omit(subset(bb, select=c(salary, team, position, mpg:top)))))
+
+## a stepwise regression base on AIC
+
+summary(fit4<-step(fit3, trace=0))
+
+@
+\end{dummy}
+The stepwise regression selected 7 variables at last: position, minutes
+per game, field goals percentage, free throws percentage, three pointers
+percentage, assists and blocks per game. We notice that the residual
+plot is much better than Figure \ref{fig:residual-plot} -- the residuals
+are well spread over the plot (except there is still a little bit
+curvature). Overall this is a satisfactory regression model.
+
+%
+\begin{figure}
+\begin{dummy}
+<<residual-new,fig=TRUE,width=5.5,height=2.75,echo=FALSE>>=
+
+par(mfrow=c(1,2),mar=c(4,4,1,.5),mgp=c(2,.9,0))
+
+plot(fit4, which=1:2)
+
+@
+\end{dummy}
+\caption{The residual plot and QQ plot of residuals: we see huge improvement
+compared to Figure \ref{fig:residual-plot}.\label{fig:residual-new}}
+
+\end{figure}
+
+
+The analysis can go on and on like this, but we do not want to be
+drown in these regressions, so perhaps it is good time to stop and
+make some conclusions.
+
+
+\section{Conclusions}
+
+In this report, we started with a given dataset in which we identified
+a problem that some players served in multiple teams, and we removed
+them in the sequel. After the data cleaning in Section \ref{sec:clean},
+we summarized the data by looking at univariate distributions and
+bivariate scatter plots in Section \ref{sec:summary}; we did not
+find particularly interesting information there, except the positive
+correlations almost everywhere. We began to investigate more variables
+in Section \ref{sec:new-variables} in greater detail, where we found
+the team and position variables were important in terms of isolating
+different groups of patterns. Meanwhile, we created a series of new
+variables based on the original variables, which found good applications
+in Section \ref{sec:regression}. Finally we made some attempts in
+regression models to find out important explanatory variables; six
+performance indicators proved to be useful.
+
+Some additional attempts were not included in this report, but they
+might indicate new directions in the future. For instance, when we
+first looked at Figure \ref{fig:salary-minutes}, we felt it might
+be good to partition the dataset into two groups, since the increasing
+patterns are different before and after 1600 minutes, and we want
+to separate the players that don't play often from the frequent players.
+Regression results showed that eliminating either group of players
+did not aid much in predicting the salary of NBA players. We did not
+make further attempts along this path, because there are too many
+ways to partition the dataset, what's more, a log-transformation has
+almost solved the problem of non-linearity. However, we can still
+consider partitioning the dataset, because there is obvious heterogeneity
+among players.
+
+We also found some background information for players, such as the
+number of years they served in a team. Unfortunately, everything just
+looked similar to Figure \ref{fig:salary-minutes}. In other words,
+the explanatory variables are highly correlated, so we would rather
+stick to the ones given in the dataset.
+
+Returning to the aim of the project, we seem to have missed an important
+part -- measures for the performance of models in terms of predictions.
+A natural way to go is cross-validation. There are still a large amount
+of machine learning techniques which we might have adopted, but we
+did not do them partly due to the requirements of this project. What
+is more important, we are skeptical of the meaning of going that far,
+since all the graphics and numeric results kept on telling us similar
+information -- most variables are highly correlated, and a subset
+of these variables can do a good job to model the salary (e.g. the
+subset we found in Section \ref{sec:regression}). We recognize our
+analysis could be superficial, but sophisticated models do not have
+to beat exploratory analysis plus common sense.
+
+\bibliographystyle{jss}
+\bibliography{0_home_yihui_Downloads_Stat503_Project1_Stat503-Project1-Wang-Zhao-Rowcliffe-Xie}
+
+
+\appendix
+
+\section{R session information}
+
+To ensure reproducibility, we give our R session information here.
+Note this document was compiled using the \textbf{pgfSweave} package
+\citep{pgfSweave} instead of the standard Sweave.
+\begin{dummy}
+<<sessionInfo>>=
+
+sessionInfo()
+
+@
+\end{dummy}
+
+\end{document}

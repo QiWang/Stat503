@@ -1,0 +1,1243 @@
+\batchmode
+\makeatletter
+\def\input@path{{/home/yihui/Downloads/Stat503/Project1//}}
+\makeatother
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{babel}
+
+\usepackage{url}
+\usepackage[authoryear]{natbib}
+\usepackage[unicode=true, pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview=FitH}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newenvironment{dummy}{\par}{\par}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\newcommand{\hlnumber}[1]{\textcolor[rgb]{0.0823529411764706,0.0784313725490196,0.709803921568627}{#1}}%
+\newcommand{\hlfunctioncall}[1]{\textcolor[rgb]{1,0,0}{#1}}%
+\newcommand{\hlstring}[1]{\textcolor[rgb]{0.6,0.6,1}{#1}}%
+\newcommand{\hlkeyword}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlargument}[1]{\textcolor[rgb]{0.694117647058824,0.247058823529412,0.0196078431372549}{#1}}%
+\newcommand{\hlcomment}[1]{\textcolor[rgb]{0.8,0.8,0.8}{#1}}%
+\newcommand{\hlroxygencomment}[1]{\textcolor[rgb]{0,0.592156862745098,1}{#1}}%
+\newcommand{\hlformalargs}[1]{\textcolor[rgb]{0.0705882352941176,0.713725490196078,0.0705882352941176}{#1}}%
+\newcommand{\hleqformalargs}[1]{\textcolor[rgb]{0.0705882352941176,0.713725490196078,0.0705882352941176}{#1}}%
+\newcommand{\hlassignement}[1]{\textcolor[rgb]{0.215686274509804,0.215686274509804,0.384313725490196}{\textbf{#1}}}%
+\newcommand{\hlpackage}[1]{\textcolor[rgb]{0.588235294117647,0.713725490196078,0.145098039215686}{#1}}%
+\newcommand{\hlslot}[1]{\textit{#1}}%
+\newcommand{\hlsymbol}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlprompt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+
+\usepackage{color}%
+ 
+\newsavebox{\hlnormalsizeboxclosebrace}%
+\newsavebox{\hlnormalsizeboxopenbrace}%
+\newsavebox{\hlnormalsizeboxbackslash}%
+\newsavebox{\hlnormalsizeboxlessthan}%
+\newsavebox{\hlnormalsizeboxgreaterthan}%
+\newsavebox{\hlnormalsizeboxdollar}%
+\newsavebox{\hlnormalsizeboxunderscore}%
+\newsavebox{\hlnormalsizeboxand}%
+\newsavebox{\hlnormalsizeboxhash}%
+\newsavebox{\hlnormalsizeboxat}%
+\newsavebox{\hlnormalsizeboxpercent}% 
+\newsavebox{\hlnormalsizeboxhat}%
+\newsavebox{\hlnormalsizeboxsinglequote}%
+\newsavebox{\hlnormalsizeboxbacktick}%
+
+\setbox\hlnormalsizeboxopenbrace=\hbox{\begin{normalsize}\verb.{.\end{normalsize}}%
+\setbox\hlnormalsizeboxclosebrace=\hbox{\begin{normalsize}\verb.}.\end{normalsize}}%
+\setbox\hlnormalsizeboxlessthan=\hbox{\begin{normalsize}\verb.<.\end{normalsize}}%
+\setbox\hlnormalsizeboxdollar=\hbox{\begin{normalsize}\verb.$.\end{normalsize}}%
+\setbox\hlnormalsizeboxunderscore=\hbox{\begin{normalsize}\verb._.\end{normalsize}}%
+\setbox\hlnormalsizeboxand=\hbox{\begin{normalsize}\verb.&.\end{normalsize}}%
+\setbox\hlnormalsizeboxhash=\hbox{\begin{normalsize}\verb.#.\end{normalsize}}%
+\setbox\hlnormalsizeboxat=\hbox{\begin{normalsize}\verb.@.\end{normalsize}}%
+\setbox\hlnormalsizeboxbackslash=\hbox{\begin{normalsize}\verb.\.\end{normalsize}}%
+\setbox\hlnormalsizeboxgreaterthan=\hbox{\begin{normalsize}\verb.>.\end{normalsize}}%
+\setbox\hlnormalsizeboxpercent=\hbox{\begin{normalsize}\verb.%.\end{normalsize}}%
+\setbox\hlnormalsizeboxhat=\hbox{\begin{normalsize}\verb.^.\end{normalsize}}%
+\setbox\hlnormalsizeboxsinglequote=\hbox{\begin{normalsize}\verb.'.\end{normalsize}}%
+\setbox\hlnormalsizeboxbacktick=\hbox{\begin{normalsize}\verb.`.\end{normalsize}}%
+\setbox\hlnormalsizeboxhat=\hbox{\begin{normalsize}\verb.^.\end{normalsize}}%
+
+
+
+\newsavebox{\hltinyboxclosebrace}%
+\newsavebox{\hltinyboxopenbrace}%
+\newsavebox{\hltinyboxbackslash}%
+\newsavebox{\hltinyboxlessthan}%
+\newsavebox{\hltinyboxgreaterthan}%
+\newsavebox{\hltinyboxdollar}%
+\newsavebox{\hltinyboxunderscore}%
+\newsavebox{\hltinyboxand}%
+\newsavebox{\hltinyboxhash}%
+\newsavebox{\hltinyboxat}%
+\newsavebox{\hltinyboxpercent}% 
+\newsavebox{\hltinyboxhat}%
+\newsavebox{\hltinyboxsinglequote}%
+\newsavebox{\hltinyboxbacktick}%
+
+\setbox\hltinyboxopenbrace=\hbox{\begin{tiny}\verb.{.\end{tiny}}%
+\setbox\hltinyboxclosebrace=\hbox{\begin{tiny}\verb.}.\end{tiny}}%
+\setbox\hltinyboxlessthan=\hbox{\begin{tiny}\verb.<.\end{tiny}}%
+\setbox\hltinyboxdollar=\hbox{\begin{tiny}\verb.$.\end{tiny}}%
+\setbox\hltinyboxunderscore=\hbox{\begin{tiny}\verb._.\end{tiny}}%
+\setbox\hltinyboxand=\hbox{\begin{tiny}\verb.&.\end{tiny}}%
+\setbox\hltinyboxhash=\hbox{\begin{tiny}\verb.#.\end{tiny}}%
+\setbox\hltinyboxat=\hbox{\begin{tiny}\verb.@.\end{tiny}}%
+\setbox\hltinyboxbackslash=\hbox{\begin{tiny}\verb.\.\end{tiny}}%
+\setbox\hltinyboxgreaterthan=\hbox{\begin{tiny}\verb.>.\end{tiny}}%
+\setbox\hltinyboxpercent=\hbox{\begin{tiny}\verb.%.\end{tiny}}%
+\setbox\hltinyboxhat=\hbox{\begin{tiny}\verb.^.\end{tiny}}%
+\setbox\hltinyboxsinglequote=\hbox{\begin{tiny}\verb.'.\end{tiny}}%
+\setbox\hltinyboxbacktick=\hbox{\begin{tiny}\verb.`.\end{tiny}}%
+\setbox\hltinyboxhat=\hbox{\begin{tiny}\verb.^.\end{tiny}}%
+
+
+
+\newsavebox{\hlscriptsizeboxclosebrace}%
+\newsavebox{\hlscriptsizeboxopenbrace}%
+\newsavebox{\hlscriptsizeboxbackslash}%
+\newsavebox{\hlscriptsizeboxlessthan}%
+\newsavebox{\hlscriptsizeboxgreaterthan}%
+\newsavebox{\hlscriptsizeboxdollar}%
+\newsavebox{\hlscriptsizeboxunderscore}%
+\newsavebox{\hlscriptsizeboxand}%
+\newsavebox{\hlscriptsizeboxhash}%
+\newsavebox{\hlscriptsizeboxat}%
+\newsavebox{\hlscriptsizeboxpercent}% 
+\newsavebox{\hlscriptsizeboxhat}%
+\newsavebox{\hlscriptsizeboxsinglequote}%
+\newsavebox{\hlscriptsizeboxbacktick}%
+
+\setbox\hlscriptsizeboxopenbrace=\hbox{\begin{scriptsize}\verb.{.\end{scriptsize}}%
+\setbox\hlscriptsizeboxclosebrace=\hbox{\begin{scriptsize}\verb.}.\end{scriptsize}}%
+\setbox\hlscriptsizeboxlessthan=\hbox{\begin{scriptsize}\verb.<.\end{scriptsize}}%
+\setbox\hlscriptsizeboxdollar=\hbox{\begin{scriptsize}\verb.$.\end{scriptsize}}%
+\setbox\hlscriptsizeboxunderscore=\hbox{\begin{scriptsize}\verb._.\end{scriptsize}}%
+\setbox\hlscriptsizeboxand=\hbox{\begin{scriptsize}\verb.&.\end{scriptsize}}%
+\setbox\hlscriptsizeboxhash=\hbox{\begin{scriptsize}\verb.#.\end{scriptsize}}%
+\setbox\hlscriptsizeboxat=\hbox{\begin{scriptsize}\verb.@.\end{scriptsize}}%
+\setbox\hlscriptsizeboxbackslash=\hbox{\begin{scriptsize}\verb.\.\end{scriptsize}}%
+\setbox\hlscriptsizeboxgreaterthan=\hbox{\begin{scriptsize}\verb.>.\end{scriptsize}}%
+\setbox\hlscriptsizeboxpercent=\hbox{\begin{scriptsize}\verb.%.\end{scriptsize}}%
+\setbox\hlscriptsizeboxhat=\hbox{\begin{scriptsize}\verb.^.\end{scriptsize}}%
+\setbox\hlscriptsizeboxsinglequote=\hbox{\begin{scriptsize}\verb.'.\end{scriptsize}}%
+\setbox\hlscriptsizeboxbacktick=\hbox{\begin{scriptsize}\verb.`.\end{scriptsize}}%
+\setbox\hlscriptsizeboxhat=\hbox{\begin{scriptsize}\verb.^.\end{scriptsize}}%
+
+
+
+\newsavebox{\hlfootnotesizeboxclosebrace}%
+\newsavebox{\hlfootnotesizeboxopenbrace}%
+\newsavebox{\hlfootnotesizeboxbackslash}%
+\newsavebox{\hlfootnotesizeboxlessthan}%
+\newsavebox{\hlfootnotesizeboxgreaterthan}%
+\newsavebox{\hlfootnotesizeboxdollar}%
+\newsavebox{\hlfootnotesizeboxunderscore}%
+\newsavebox{\hlfootnotesizeboxand}%
+\newsavebox{\hlfootnotesizeboxhash}%
+\newsavebox{\hlfootnotesizeboxat}%
+\newsavebox{\hlfootnotesizeboxpercent}% 
+\newsavebox{\hlfootnotesizeboxhat}%
+\newsavebox{\hlfootnotesizeboxsinglequote}%
+\newsavebox{\hlfootnotesizeboxbacktick}%
+
+\setbox\hlfootnotesizeboxopenbrace=\hbox{\begin{footnotesize}\verb.{.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxclosebrace=\hbox{\begin{footnotesize}\verb.}.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxlessthan=\hbox{\begin{footnotesize}\verb.<.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxdollar=\hbox{\begin{footnotesize}\verb.$.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxunderscore=\hbox{\begin{footnotesize}\verb._.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxand=\hbox{\begin{footnotesize}\verb.&.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxhash=\hbox{\begin{footnotesize}\verb.#.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxat=\hbox{\begin{footnotesize}\verb.@.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxbackslash=\hbox{\begin{footnotesize}\verb.\.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxgreaterthan=\hbox{\begin{footnotesize}\verb.>.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxpercent=\hbox{\begin{footnotesize}\verb.%.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxhat=\hbox{\begin{footnotesize}\verb.^.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxsinglequote=\hbox{\begin{footnotesize}\verb.'.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxbacktick=\hbox{\begin{footnotesize}\verb.`.\end{footnotesize}}%
+\setbox\hlfootnotesizeboxhat=\hbox{\begin{footnotesize}\verb.^.\end{footnotesize}}%
+
+
+
+\newsavebox{\hlsmallboxclosebrace}%
+\newsavebox{\hlsmallboxopenbrace}%
+\newsavebox{\hlsmallboxbackslash}%
+\newsavebox{\hlsmallboxlessthan}%
+\newsavebox{\hlsmallboxgreaterthan}%
+\newsavebox{\hlsmallboxdollar}%
+\newsavebox{\hlsmallboxunderscore}%
+\newsavebox{\hlsmallboxand}%
+\newsavebox{\hlsmallboxhash}%
+\newsavebox{\hlsmallboxat}%
+\newsavebox{\hlsmallboxpercent}% 
+\newsavebox{\hlsmallboxhat}%
+\newsavebox{\hlsmallboxsinglequote}%
+\newsavebox{\hlsmallboxbacktick}%
+
+\setbox\hlsmallboxopenbrace=\hbox{\begin{small}\verb.{.\end{small}}%
+\setbox\hlsmallboxclosebrace=\hbox{\begin{small}\verb.}.\end{small}}%
+\setbox\hlsmallboxlessthan=\hbox{\begin{small}\verb.<.\end{small}}%
+\setbox\hlsmallboxdollar=\hbox{\begin{small}\verb.$.\end{small}}%
+\setbox\hlsmallboxunderscore=\hbox{\begin{small}\verb._.\end{small}}%
+\setbox\hlsmallboxand=\hbox{\begin{small}\verb.&.\end{small}}%
+\setbox\hlsmallboxhash=\hbox{\begin{small}\verb.#.\end{small}}%
+\setbox\hlsmallboxat=\hbox{\begin{small}\verb.@.\end{small}}%
+\setbox\hlsmallboxbackslash=\hbox{\begin{small}\verb.\.\end{small}}%
+\setbox\hlsmallboxgreaterthan=\hbox{\begin{small}\verb.>.\end{small}}%
+\setbox\hlsmallboxpercent=\hbox{\begin{small}\verb.%.\end{small}}%
+\setbox\hlsmallboxhat=\hbox{\begin{small}\verb.^.\end{small}}%
+\setbox\hlsmallboxsinglequote=\hbox{\begin{small}\verb.'.\end{small}}%
+\setbox\hlsmallboxbacktick=\hbox{\begin{small}\verb.`.\end{small}}%
+\setbox\hlsmallboxhat=\hbox{\begin{small}\verb.^.\end{small}}%
+
+
+
+\newsavebox{\hllargeboxclosebrace}%
+\newsavebox{\hllargeboxopenbrace}%
+\newsavebox{\hllargeboxbackslash}%
+\newsavebox{\hllargeboxlessthan}%
+\newsavebox{\hllargeboxgreaterthan}%
+\newsavebox{\hllargeboxdollar}%
+\newsavebox{\hllargeboxunderscore}%
+\newsavebox{\hllargeboxand}%
+\newsavebox{\hllargeboxhash}%
+\newsavebox{\hllargeboxat}%
+\newsavebox{\hllargeboxpercent}% 
+\newsavebox{\hllargeboxhat}%
+\newsavebox{\hllargeboxsinglequote}%
+\newsavebox{\hllargeboxbacktick}%
+
+\setbox\hllargeboxopenbrace=\hbox{\begin{large}\verb.{.\end{large}}%
+\setbox\hllargeboxclosebrace=\hbox{\begin{large}\verb.}.\end{large}}%
+\setbox\hllargeboxlessthan=\hbox{\begin{large}\verb.<.\end{large}}%
+\setbox\hllargeboxdollar=\hbox{\begin{large}\verb.$.\end{large}}%
+\setbox\hllargeboxunderscore=\hbox{\begin{large}\verb._.\end{large}}%
+\setbox\hllargeboxand=\hbox{\begin{large}\verb.&.\end{large}}%
+\setbox\hllargeboxhash=\hbox{\begin{large}\verb.#.\end{large}}%
+\setbox\hllargeboxat=\hbox{\begin{large}\verb.@.\end{large}}%
+\setbox\hllargeboxbackslash=\hbox{\begin{large}\verb.\.\end{large}}%
+\setbox\hllargeboxgreaterthan=\hbox{\begin{large}\verb.>.\end{large}}%
+\setbox\hllargeboxpercent=\hbox{\begin{large}\verb.%.\end{large}}%
+\setbox\hllargeboxhat=\hbox{\begin{large}\verb.^.\end{large}}%
+\setbox\hllargeboxsinglequote=\hbox{\begin{large}\verb.'.\end{large}}%
+\setbox\hllargeboxbacktick=\hbox{\begin{large}\verb.`.\end{large}}%
+\setbox\hllargeboxhat=\hbox{\begin{large}\verb.^.\end{large}}%
+
+
+
+\newsavebox{\hlLargeboxclosebrace}%
+\newsavebox{\hlLargeboxopenbrace}%
+\newsavebox{\hlLargeboxbackslash}%
+\newsavebox{\hlLargeboxlessthan}%
+\newsavebox{\hlLargeboxgreaterthan}%
+\newsavebox{\hlLargeboxdollar}%
+\newsavebox{\hlLargeboxunderscore}%
+\newsavebox{\hlLargeboxand}%
+\newsavebox{\hlLargeboxhash}%
+\newsavebox{\hlLargeboxat}%
+\newsavebox{\hlLargeboxpercent}% 
+\newsavebox{\hlLargeboxhat}%
+\newsavebox{\hlLargeboxsinglequote}%
+\newsavebox{\hlLargeboxbacktick}%
+
+\setbox\hlLargeboxopenbrace=\hbox{\begin{Large}\verb.{.\end{Large}}%
+\setbox\hlLargeboxclosebrace=\hbox{\begin{Large}\verb.}.\end{Large}}%
+\setbox\hlLargeboxlessthan=\hbox{\begin{Large}\verb.<.\end{Large}}%
+\setbox\hlLargeboxdollar=\hbox{\begin{Large}\verb.$.\end{Large}}%
+\setbox\hlLargeboxunderscore=\hbox{\begin{Large}\verb._.\end{Large}}%
+\setbox\hlLargeboxand=\hbox{\begin{Large}\verb.&.\end{Large}}%
+\setbox\hlLargeboxhash=\hbox{\begin{Large}\verb.#.\end{Large}}%
+\setbox\hlLargeboxat=\hbox{\begin{Large}\verb.@.\end{Large}}%
+\setbox\hlLargeboxbackslash=\hbox{\begin{Large}\verb.\.\end{Large}}%
+\setbox\hlLargeboxgreaterthan=\hbox{\begin{Large}\verb.>.\end{Large}}%
+\setbox\hlLargeboxpercent=\hbox{\begin{Large}\verb.%.\end{Large}}%
+\setbox\hlLargeboxhat=\hbox{\begin{Large}\verb.^.\end{Large}}%
+\setbox\hlLargeboxsinglequote=\hbox{\begin{Large}\verb.'.\end{Large}}%
+\setbox\hlLargeboxbacktick=\hbox{\begin{Large}\verb.`.\end{Large}}%
+\setbox\hlLargeboxhat=\hbox{\begin{Large}\verb.^.\end{Large}}%
+
+
+
+\newsavebox{\hlLARGEboxclosebrace}%
+\newsavebox{\hlLARGEboxopenbrace}%
+\newsavebox{\hlLARGEboxbackslash}%
+\newsavebox{\hlLARGEboxlessthan}%
+\newsavebox{\hlLARGEboxgreaterthan}%
+\newsavebox{\hlLARGEboxdollar}%
+\newsavebox{\hlLARGEboxunderscore}%
+\newsavebox{\hlLARGEboxand}%
+\newsavebox{\hlLARGEboxhash}%
+\newsavebox{\hlLARGEboxat}%
+\newsavebox{\hlLARGEboxpercent}% 
+\newsavebox{\hlLARGEboxhat}%
+\newsavebox{\hlLARGEboxsinglequote}%
+\newsavebox{\hlLARGEboxbacktick}%
+
+\setbox\hlLARGEboxopenbrace=\hbox{\begin{LARGE}\verb.{.\end{LARGE}}%
+\setbox\hlLARGEboxclosebrace=\hbox{\begin{LARGE}\verb.}.\end{LARGE}}%
+\setbox\hlLARGEboxlessthan=\hbox{\begin{LARGE}\verb.<.\end{LARGE}}%
+\setbox\hlLARGEboxdollar=\hbox{\begin{LARGE}\verb.$.\end{LARGE}}%
+\setbox\hlLARGEboxunderscore=\hbox{\begin{LARGE}\verb._.\end{LARGE}}%
+\setbox\hlLARGEboxand=\hbox{\begin{LARGE}\verb.&.\end{LARGE}}%
+\setbox\hlLARGEboxhash=\hbox{\begin{LARGE}\verb.#.\end{LARGE}}%
+\setbox\hlLARGEboxat=\hbox{\begin{LARGE}\verb.@.\end{LARGE}}%
+\setbox\hlLARGEboxbackslash=\hbox{\begin{LARGE}\verb.\.\end{LARGE}}%
+\setbox\hlLARGEboxgreaterthan=\hbox{\begin{LARGE}\verb.>.\end{LARGE}}%
+\setbox\hlLARGEboxpercent=\hbox{\begin{LARGE}\verb.%.\end{LARGE}}%
+\setbox\hlLARGEboxhat=\hbox{\begin{LARGE}\verb.^.\end{LARGE}}%
+\setbox\hlLARGEboxsinglequote=\hbox{\begin{LARGE}\verb.'.\end{LARGE}}%
+\setbox\hlLARGEboxbacktick=\hbox{\begin{LARGE}\verb.`.\end{LARGE}}%
+\setbox\hlLARGEboxhat=\hbox{\begin{LARGE}\verb.^.\end{LARGE}}%
+
+
+
+\newsavebox{\hlhugeboxclosebrace}%
+\newsavebox{\hlhugeboxopenbrace}%
+\newsavebox{\hlhugeboxbackslash}%
+\newsavebox{\hlhugeboxlessthan}%
+\newsavebox{\hlhugeboxgreaterthan}%
+\newsavebox{\hlhugeboxdollar}%
+\newsavebox{\hlhugeboxunderscore}%
+\newsavebox{\hlhugeboxand}%
+\newsavebox{\hlhugeboxhash}%
+\newsavebox{\hlhugeboxat}%
+\newsavebox{\hlhugeboxpercent}% 
+\newsavebox{\hlhugeboxhat}%
+\newsavebox{\hlhugeboxsinglequote}%
+\newsavebox{\hlhugeboxbacktick}%
+
+\setbox\hlhugeboxopenbrace=\hbox{\begin{huge}\verb.{.\end{huge}}%
+\setbox\hlhugeboxclosebrace=\hbox{\begin{huge}\verb.}.\end{huge}}%
+\setbox\hlhugeboxlessthan=\hbox{\begin{huge}\verb.<.\end{huge}}%
+\setbox\hlhugeboxdollar=\hbox{\begin{huge}\verb.$.\end{huge}}%
+\setbox\hlhugeboxunderscore=\hbox{\begin{huge}\verb._.\end{huge}}%
+\setbox\hlhugeboxand=\hbox{\begin{huge}\verb.&.\end{huge}}%
+\setbox\hlhugeboxhash=\hbox{\begin{huge}\verb.#.\end{huge}}%
+\setbox\hlhugeboxat=\hbox{\begin{huge}\verb.@.\end{huge}}%
+\setbox\hlhugeboxbackslash=\hbox{\begin{huge}\verb.\.\end{huge}}%
+\setbox\hlhugeboxgreaterthan=\hbox{\begin{huge}\verb.>.\end{huge}}%
+\setbox\hlhugeboxpercent=\hbox{\begin{huge}\verb.%.\end{huge}}%
+\setbox\hlhugeboxhat=\hbox{\begin{huge}\verb.^.\end{huge}}%
+\setbox\hlhugeboxsinglequote=\hbox{\begin{huge}\verb.'.\end{huge}}%
+\setbox\hlhugeboxbacktick=\hbox{\begin{huge}\verb.`.\end{huge}}%
+\setbox\hlhugeboxhat=\hbox{\begin{huge}\verb.^.\end{huge}}%
+
+
+
+\newsavebox{\hlHugeboxclosebrace}%
+\newsavebox{\hlHugeboxopenbrace}%
+\newsavebox{\hlHugeboxbackslash}%
+\newsavebox{\hlHugeboxlessthan}%
+\newsavebox{\hlHugeboxgreaterthan}%
+\newsavebox{\hlHugeboxdollar}%
+\newsavebox{\hlHugeboxunderscore}%
+\newsavebox{\hlHugeboxand}%
+\newsavebox{\hlHugeboxhash}%
+\newsavebox{\hlHugeboxat}%
+\newsavebox{\hlHugeboxpercent}% 
+\newsavebox{\hlHugeboxhat}%
+\newsavebox{\hlHugeboxsinglequote}%
+\newsavebox{\hlHugeboxbacktick}%
+
+\setbox\hlHugeboxopenbrace=\hbox{\begin{Huge}\verb.{.\end{Huge}}%
+\setbox\hlHugeboxclosebrace=\hbox{\begin{Huge}\verb.}.\end{Huge}}%
+\setbox\hlHugeboxlessthan=\hbox{\begin{Huge}\verb.<.\end{Huge}}%
+\setbox\hlHugeboxdollar=\hbox{\begin{Huge}\verb.$.\end{Huge}}%
+\setbox\hlHugeboxunderscore=\hbox{\begin{Huge}\verb._.\end{Huge}}%
+\setbox\hlHugeboxand=\hbox{\begin{Huge}\verb.&.\end{Huge}}%
+\setbox\hlHugeboxhash=\hbox{\begin{Huge}\verb.#.\end{Huge}}%
+\setbox\hlHugeboxat=\hbox{\begin{Huge}\verb.@.\end{Huge}}%
+\setbox\hlHugeboxbackslash=\hbox{\begin{Huge}\verb.\.\end{Huge}}%
+\setbox\hlHugeboxgreaterthan=\hbox{\begin{Huge}\verb.>.\end{Huge}}%
+\setbox\hlHugeboxpercent=\hbox{\begin{Huge}\verb.%.\end{Huge}}%
+\setbox\hlHugeboxhat=\hbox{\begin{Huge}\verb.^.\end{Huge}}%
+\setbox\hlHugeboxsinglequote=\hbox{\begin{Huge}\verb.'.\end{Huge}}%
+\setbox\hlHugeboxbacktick=\hbox{\begin{Huge}\verb.`.\end{Huge}}%
+\setbox\hlHugeboxhat=\hbox{\begin{Huge}\verb.^.\end{Huge}}%
+ 
+
+\def\urltilda{\kern -.15em\lower .7ex\hbox{\~{}}\kern .04em}%
+
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.16,0.16,1}{#1}}
+\newcommand{\hlesc}[1]{\textcolor[rgb]{1,0,1}{#1}}
+\newcommand{\hlstr}[1]{\textcolor[rgb]{1,0,0}{#1}}
+\newcommand{\hldstr}[1]{\textcolor[rgb]{0.51,0.51,0}{#1}}
+\newcommand{\hlslc}[1]{\textcolor[rgb]{0.51,0.51,0.51}{\it{#1}}}
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.51,0.51,0.51}{\it{#1}}}
+\newcommand{\hldir}[1]{\textcolor[rgb]{0,0.51,0}{#1}}
+\newcommand{\hlsym}[1]{\textcolor[rgb]{0,0,0}{#1}}
+\newcommand{\hlline}[1]{\textcolor[rgb]{0.33,0.33,0.33}{#1}}
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0,0,0}{\bf{#1}}}
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.51,0,0}{#1}}
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0,0,0}{\bf{#1}}}
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0,0,0.51}{#1}}
+
+\usepackage[nogin]{Sweave}
+\usepackage{tikz}
+\renewcommand{\rmdefault}{ppl}
+\renewcommand{\sfdefault}{aess}
+\renewcommand{\ttdefault}{aett}
+
+\makeatother
+
+\pgfrealjobname{Stat503-Project1-Wang-Zhao-Rowcliffe-Xie}
+\begin{document}
+
+\begin{dummy}
+
+\end{dummy}
+
+\title{Stat503 Project 1: Basketball -- Skills and Salary}
+
+
+\author{Qi Wang \and Yifan Zhao \and William Rowcliffe \and Yihui Xie}
+\maketitle
+\begin{abstract}
+In this report, we analyzed a basketball dataset containing statistics
+for NBA players in 2009, and tried to find out important predictors
+for the \texttt{salary} variable. First, we cleaned the dataset, because
+there are 9 players who served in multiple teams during the year 2009;
+then we gave a summary of the dataset, including the univariate distributions
+of some variables, as well as the relationship between salary and
+many other variables such as the minutes played and the field goals
+made and so on; these exploratory attempts gave an indication that
+new variables might be more appropriate in predicting the salary;
+finally we used linear regressions to do the variable selection to
+detect most important predictors.
+\end{abstract}
+
+\section{Introduction}
+
+We are given a dataset which contains NBA player statistics for the
+2008 -- 2009 season, and salaries for the 2009 -- 2010 season. Statistics
+come from the web page \url{http://www.databasebasketball.com/stats download.htm}
+and salaries from \url{http://content.usatoday.com/sportsdata/basketball/nba/salaries/team}.
+The goal is to find out a number of predictors which can best predict
+the salary. Below is a list of variables involved:
+\begin{description}
+\item [{position:}] the position the player played in the team (\texttt{Center},
+\texttt{Forward}, \texttt{Guard}) 
+\item [{team:}] the code for the name of team 
+\item [{gp:}] the number of games the player played 
+\item [{minutes:}] the minutes the player played 
+\item [{oreb:}] the number of offensive rebounds the player made 
+\item [{dreb:}] the number of defensive rebounds the player made 
+\item [{rob:}] the number of rebounds the player made
+\item [{asts:}] the assists the player made 
+\item [{stl:}] the steals the player made
+\item [{blk:}] the blocks the player made 
+\item [{turnover:}] the turnovers the player made
+\item [{pf:}] the personal fouls the player made 
+\item [{fga:}] the field goals the player attempted to make 
+\item [{fgm:}] the field goals the player made
+\item [{fta:}] the free throws the player attempted to make 
+\item [{ftm:}] the free throws the player made
+\item [{tpa:}] the three pointers the player attempted to make 
+\item [{tpm:}] the three pointers the player made
+\end{description}
+
+\section{Data cleaning\label{sec:clean}}
+
+A closer look at the data records revealed that there were 9 players
+who played for more than one team in 2009, for example, Mike Harris
+played in both Houston Rockets and Washington Wizards. All the {}``duplicate''
+records are as follows:
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}{\ }\hlassignement{=}{\ }\hlfunctioncall{read.csv}\hlkeyword{(}\hlstring{"bb-2009-all-correct.csv"}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{dup.players}{\ }\hlassignement{=}{\ }\hlfunctioncall{with}\hlkeyword{(}\hlsymbol{bb}\hlkeyword{,}{\ }\hlsymbol{ilkid}{\ }\hlkeyword{\usebox{\hlnormalsizeboxpercent}in\usebox{\hlnormalsizeboxpercent}}{\ }\hlsymbol{ilkid}\hlkeyword{[}\hlfunctioncall{duplicated}\hlkeyword{(}\hlsymbol{ilkid}\hlkeyword{)}\hlkeyword{]}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{[}\hlsymbol{dup.players}\hlkeyword{,}{\ }\hlfunctioncall{c}\hlkeyword{(}\hlnumber{1}\hlkeyword{:}\hlnumber{3}\hlkeyword{,}{\ }\hlnumber{5}\hlkeyword{,}{\ }\hlnumber{25}\hlkeyword{,}{\ }\hlnumber{26}\hlkeyword{)}\hlkeyword{]}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\begin{Schunk}
+\begin{Soutput}
+        ilkid firstname     lastname team position salary
+163 HarriMi01      Mike       Harris  HOU  Forward 164611
+164 HarriMi01      Mike       Harris  WAS  Forward  25672
+186 HudsoLe01    Lester       Hudson  MEM    Guard 457588
+187 HudsoLe01    Lester       Hudson  BOS    Guard 193802
+201 JacksCe01    Cedric      Jackson  SAS    Guard  26917
+202 JacksCe01    Cedric      Jackson  CLE    Guard  53834
+203 JacksCe01    Cedric      Jackson  WAS    Guard  43067
+228  KarlCo01      Coby         Karl  GSW    Guard  48559
+229  KarlCo01      Coby         Karl  CLE  Forward 311896
+242 LivinSh01     Shaun   Livingston  OKC    Guard 321584
+243 LivinSh01     Shaun   Livingston  WAS    Guard 244644
+268 MensaPo01      Pops Mensah-Bonsu  TOR  Forward 262217
+269 MensaPo01      Pops Mensah-Bonsu  HOU  Forward  82550
+361 TemplGa01   Garrett       Temple  HOU    Guard  53834
+362 TemplGa01   Garrett       Temple  SAS  Forward  96901
+363 TemplGa01   Garrett       Temple  SAC  Forward  26917
+\end{Soutput}
+
+\end{Schunk}
+\end{dummy}
+The naturual question is how to deal with these records, and we decided
+to remove them due to 3 reasons:
+\begin{enumerate}
+\item the total sample size is 417, and these records are only a small portion
+of the whole sample;
+\item it is hard to decide whether to add their salaries in different teams
+up or average them or leave them untouched, because we have no clue
+how these salary values came from -- are they what these players actually
+got in 2009 or simply the numbers in their contracts with the teams?
+(we tried to look at the website and the data source remained unclear);
+\item most of their salaries are relatively low, which does not contribute
+much in the salary prediction; Figure \ref{fig:duplicate-plot} shows
+that the salaries of these players do not follow the general pattern
+of \texttt{salary} vs \texttt{minutes}, and we will know later that
+the minutes played in a team is an important predictor for salary,
+so removing them will not affect our prediction much;
+\end{enumerate}
+%
+\begin{figure}
+\begin{dummy}
+
+\begin{center}
+
+\beginpgfgraphicnamed{figure/Rfig-duplicate-plot}
+\input{figure/Rfig-duplicate-plot.tikz}
+\endpgfgraphicnamed
+\end{center}
+\end{dummy}
+\caption{The players who served in more than one team in 2009: a scatter plot
+of \texttt{salary} vs \texttt{minutes}. Note most of these players
+are in the far bottom-left corner.\label{fig:duplicate-plot}}
+
+\end{figure}
+
+
+Now there are 401 records in the cleaned dataset.
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{[}\hlkeyword{!}\hlsymbol{dup.players}\hlkeyword{,}{\ }\hlkeyword{-}\hlfunctioncall{c}\hlkeyword{(}\hlnumber{4}\hlkeyword{,}{\ }\hlnumber{6}\hlkeyword{,}{\ }\hlnumber{7}\hlkeyword{)}\hlkeyword{]}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{dim}\hlkeyword{(}\hlsymbol{bb}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\begin{Schunk}
+\begin{Soutput}
+[1] 401  23
+\end{Soutput}
+
+\end{Schunk}
+\end{dummy}
+
+\section{A summary of the data\label{sec:summary}}
+
+%
+\begin{figure}
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{print}\hlkeyword{(}\hlfunctioncall{qplot}\hlkeyword{(}\hlsymbol{salary}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlsymbol{bb}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}
+\begin{center}
+
+\beginpgfgraphicnamed{figure/Rfig-hist-salary}
+\input{figure/Rfig-hist-salary.tikz}
+\endpgfgraphicnamed
+\end{center}
+\end{dummy}
+\caption{The distribution of salary: the histogram is severely skewed to the
+right. The range of salaries is very large, and often there are only
+a few key players to a team.\label{fig:hist-salary}}
+
+\end{figure}
+
+
+In this section we will give a summary of the dataset. Since our direct
+goal is to predict salary, it is natural to take a look at the distribution
+of the salary in Figure \ref{fig:hist-salary}, which is skewed to
+the right and has a long tail. This may indicate a log-transformation
+of the salary data, and we will see later the effects of transformation.
+
+%
+\begin{figure}
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{print}\hlkeyword{(}\hlfunctioncall{qplot}\hlkeyword{(}\hlsymbol{minutes}\hlkeyword{,}{\ }\hlsymbol{salary}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlsymbol{bb}\hlkeyword{,}{\ }\hlargument{geom}{\ }\hlargument{=}{\ }\hlfunctioncall{c}\hlkeyword{(}\hlstring{"point"}\hlkeyword{,}{\ }\hlstring{"smooth"}\hlkeyword{)}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}
+\begin{center}
+
+\beginpgfgraphicnamed{figure/Rfig-salary-minutes}
+\input{figure/Rfig-salary-minutes.tikz}
+\endpgfgraphicnamed
+\end{center}
+\end{dummy}
+\caption{A scatter plot of \texttt{salary} vs \texttt{minutes} with a smooth
+curve: the relationship looks linear, but there is a change in the
+increase of salary with minutes around $minutes\approx1600$.\label{fig:salary-minutes}}
+
+\end{figure}
+
+
+Figure \ref{fig:salary-minutes} is a scatter plot of \texttt{salary}
+vs \texttt{minutes} with a smooth curve. Here we will start to see
+a trend that is common throughout this dataset, which is high variance.
+The increase in salary as a function of the minutes played is true
+on average, but very uncertain for prediction. It is important to
+note that the correlation is not completely linear. There is a change
+in the increase of salary with minutes around $minutes\approx1600$;
+before that the increase gets slower and slower. This sounds like
+the {}``law of diminishing marginal utility'' in economics. However,
+when the player has played for an enough long time, the speed for
+the increase will be faster again. 
+
+Similarly we can plot salary agaist other variables such as \texttt{asts},
+\texttt{pf} and \texttt{reb}:
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{qplot}\hlkeyword{(}\hlsymbol{asts}\hlkeyword{,}{\ }\hlsymbol{salary}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlsymbol{bb}\hlkeyword{,}{\ }\hlargument{geom}{\ }\hlargument{=}{\ }\hlfunctioncall{c}\hlkeyword{(}\hlstring{"point"}\hlkeyword{,}{\ }\hlstring{"smooth"}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{qplot}\hlkeyword{(}\hlsymbol{pf}\hlkeyword{,}{\ }\hlsymbol{salary}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlsymbol{bb}\hlkeyword{,}{\ }\hlargument{geom}{\ }\hlargument{=}{\ }\hlfunctioncall{c}\hlkeyword{(}\hlstring{"point"}\hlkeyword{,}{\ }\hlstring{"smooth"}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{qplot}\hlkeyword{(}\hlsymbol{reb}\hlkeyword{,}{\ }\hlsymbol{salary}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlsymbol{bb}\hlkeyword{,}{\ }\hlargument{geom}{\ }\hlargument{=}{\ }\hlfunctioncall{c}\hlkeyword{(}\hlstring{"point"}\hlkeyword{,}{\ }\hlstring{"smooth"}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}
+\end{dummy}
+We will omit the graphics output in this report to save space (the
+reader can reproduce them using the supplementary R code). As a matter
+of fact, we can observe similar trends in these three scatter plots,
+which will be summarized after we briefly describe the three plots.
+
+For the number of assists, the plot exposes a high density of players
+with fewer assists. It appears that there is a strong positive correlation
+when assists are fewer than 200. After this point the variance increases
+greatly and correlation is decreased to almost zero. This makes intuitive
+sense, because the less dominate players will likely get paid more
+if they are good support for the higher paid players. Likewise, higher
+paid players generally should be scoring points and having fewer assists. 
+
+Since some personal fouls can be strategic and others are mistakes
+of temperamental players, it is not surprising that this data has
+a large variace. Since some positions might have more strategic reason
+to foul, it may be interesting to observe this plot seperated by possition
+type. 
+
+Once again, we believe the number of rebounds is very dependent on
+the position. Although we see a possitive correlation in the scatter
+plot of \texttt{salary} vs \texttt{reb}, we expect that the possition
+specific plots will be more clear.
+
+The general pattern is, the salary tends to increase with \texttt{asts},
+\texttt{pf} and \texttt{reb} if we try to examine the bivariate relationship,
+and the increase does not strictly follow a linear pattern -- there
+are {}``change points'' in the regression curves, and there seems
+to be heteroskedasticity, too. We leave these problems to Section
+\ref{sec:regression}.
+
+It will be naive for us to jump to conclusions that players should
+be encouraged to give more assists or make more fouls to earn a high
+salary. The main reason that we observed the positive correlation
+almost everywhere is perhaps all these explanatory variables are positively
+correlated with the experience of a player, which is reflected in
+many variables, such as the number of games played. Apparently, the
+more games one plays, the more experience he will gain, and the more
+assists and fouls he will tend to make. It is tempting to make causal
+inference here, but we must always bear in mind that observational
+data is inappropriate to reveal causality.
+
+A scatter plot matrix would have given a neat illustration on the
+relationship between variables in this dataset, but again we decided
+to omit it in the report. The information/ink ratio is too low: too
+little (unexpected) information is shown in that huge plot.
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlcomment{\usebox{\hlnormalsizeboxhash}\usebox{\hlnormalsizeboxhash}{\ }in{\ }case{\ }the{\ }reader{\ }be{\ }curious{\ }about{\ }the{\ }scatter{\ }plot{\ }matrix}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{plotmatrix}\hlkeyword{(}\hlsymbol{bb}\hlkeyword{[}\hlkeyword{,}{\ }\hlnumber{5}\hlkeyword{:}\hlnumber{12}\hlkeyword{]}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}
+\end{dummy}
+
+\section{A further exploration of variables\label{sec:new-variables}}
+
+%
+\begin{figure}
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{print}\hlkeyword{(}\hlfunctioncall{qplot}\hlkeyword{(}\hlsymbol{position}\hlkeyword{,}{\ }\hlsymbol{salary}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlsymbol{bb}\hlkeyword{,}{\ }\hlargument{geom}{\ }\hlargument{=}{\ }\hlstring{"boxplot"}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}
+\begin{center}
+
+\beginpgfgraphicnamed{figure/Rfig-salary-position}
+\input{figure/Rfig-salary-position.tikz}
+\endpgfgraphicnamed
+\end{center}
+\end{dummy}
+\caption{Salaries for different positions: the \texttt{Center} seems to have
+better salaries.\label{fig:salary-position}}
+
+\end{figure}
+
+
+%
+\begin{figure}
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{print}\hlkeyword{(}\hlfunctioncall{qplot}\hlkeyword{(}\hlsymbol{minutes}\hlkeyword{/}\hlsymbol{gp}\hlkeyword{,}{\ }\hlfunctioncall{log}\hlkeyword{(}\hlsymbol{salary}\hlkeyword{)}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlsymbol{bb}\hlkeyword{,}{\ }\hlargument{facets}{\ }\hlargument{=}{\ }\hlsymbol{position}{\ }\hlkeyword{\urltilda{}}\hspace*{\fill}\\
+\hlstd{}\hlprompt{+{\ }}{\ }{\ }{\ }{\ }\hlsymbol{.}\hlkeyword{,}{\ }\hlargument{geom}{\ }\hlargument{=}{\ }\hlfunctioncall{c}\hlkeyword{(}\hlstring{"point"}\hlkeyword{,}{\ }\hlstring{"smooth"}\hlkeyword{)}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}
+\begin{center}
+
+\beginpgfgraphicnamed{figure/Rfig-salary-minpergp}
+\input{figure/Rfig-salary-minpergp.tikz}
+\endpgfgraphicnamed
+\end{center}
+\end{dummy}
+\caption{Log-salaries vs minutes per game for different positions: the relationship
+is much more linear compared to the plot on the original scale, and
+the variance is stabilized as well. Note there is an outlier in the
+guards.\label{fig:salary-minpergp}}
+
+\end{figure}
+
+
+As mentioned in Section \ref{sec:summary}, we may check the relationship
+among variables conditioned on the \texttt{position}. Figure \ref{fig:salary-position}
+are the boxplots of salaries corresponding to each position; we see
+the center has a higher salary on average. Figure \ref{fig:salary-minpergp}
+is a scatter plot of log-salary vs minutes per game for different
+positions. We took the log-transformation because we found the relationship
+became more linear and the variance was also stabilized. The absolute
+number of minutes played might not be an appropriate indicator to
+evaluate a player, for example, some less important players may have
+played for a long time in total but contributed only a little in each
+game, so it is reasonable to calculate the average minutes played
+in each game. Across all of the positions we see a general increase
+in salary with minutes per game. The most sensitive position is guard
+-- they play longer in the game on average (more points clustered
+in the right part). It is possible that the reason for this is that
+guards who can stay in a game longer are more valuable. Endurance
+may not be as important for a player that moves less, like the center.
+Generally speaking, the speed of increase in log-salary is slowest
+for the center and fastest for the forward.
+
+This motivated us to create a new variable \texttt{mpg} (minutes per
+game), which we will consider in Section \ref{sec:regression}.
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{mpg}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{minutes}\hlkeyword{/}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{gp}{\ }{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }new{\ }variable{\ }\usebox{\hlnormalsizeboxsinglequote}mpg\usebox{\hlnormalsizeboxsinglequote}}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}
+\end{dummy}
+%
+\begin{figure}
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{print}\hlkeyword{(}\hlfunctioncall{qplot}\hlkeyword{(}\hlsymbol{mpg}\hlkeyword{,}{\ }\hlfunctioncall{log}\hlkeyword{(}\hlsymbol{salary}\hlkeyword{)}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlsymbol{bb}\hlkeyword{,}{\ }\hlargument{geom}{\ }\hlargument{=}{\ }\hlfunctioncall{c}\hlkeyword{(}\hlstring{"point"}\hlkeyword{,}{\ }\hlstring{"smooth"}\hlkeyword{)}\hlkeyword{,}\hspace*{\fill}\\
+\hlstd{}\hlprompt{+{\ }}{\ }{\ }{\ }{\ }\hlargument{facets}{\ }\hlargument{=}{\ }\hlkeyword{\urltilda{}}\hlsymbol{team}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}
+\begin{center}
+
+\beginpgfgraphicnamed{figure/Rfig-salary-team}
+\input{figure/Rfig-salary-team.tikz}
+\endpgfgraphicnamed
+\end{center}
+\end{dummy}
+\caption{Scatter plots of log-salary vs minutes per game, conditioned on team.
+The smoothing curves are much more compact than the overall scatter
+plots, and we can take a closer look at each team to see different
+policies on the player's salary, e.g. Cavaliers seem to stick strictly
+to the {}``no pain no gain'' rule, but Lakers might have high salary
+in the beginning, and then they are unable to earn high salary if
+they have not played intensively enough (the salary dropped down in
+the half-way!).\label{fig:salary-team}}
+
+\end{figure}
+
+
+There is another categorical \texttt{team} in the data. We have no
+reason not to look at it. Figure \ref{fig:salary-team} shows the
+relationship between log-salary and minutes per game conditioned on
+\texttt{team}. It revealed a lot of interesting phenomena. For example,
+CLE Cavaliers can earn higher salary with greater \texttt{mpg} --
+the relationship is fairly linear; whereas LAL Lakers do not necessarily
+gain higher salary in the beginning, although their \texttt{mpg} is
+increasing. There are several other interesting teams, such as Boston
+Celtics (BOS), Golden State Warriors (GSW) and New York Knicks (NYK).
+We really feel curious how their salaries were decided, because their
+curves are really {}``wiggly''. There is a player in Washington
+Wizards who was significantly underpaid; perhaps a scout should keep
+an eye on this player.
+
+Should we take the team into account when predicting salaries? The
+answer seems to be {}``definitely!''. However, there is a potential
+danger in doing so, namely overfitting. To put it to an extreme, we
+can make perfect predictions if we divide the data into enough small
+chunks. We decided not to make haste for the time being.
+
+We can observe similar patterns in the scatter plots of log-salary
+vs points per game; the graphics output is omitted.
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{qplot}\hlkeyword{(}\hlsymbol{pts}\hlkeyword{/}\hlsymbol{gp}\hlkeyword{,}{\ }\hlfunctioncall{log}\hlkeyword{(}\hlsymbol{salary}\hlkeyword{)}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlsymbol{bb}\hlkeyword{,}{\ }\hlargument{facets}{\ }\hlargument{=}{\ }\hlkeyword{\urltilda{}}\hlsymbol{team}\hlkeyword{,}{\ }\hlargument{geom}{\ }\hlargument{=}{\ }\hlfunctioncall{c}\hlkeyword{(}\hlstring{"point"}\hlkeyword{,}\hspace*{\fill}\\
+\hlstd{}\hlprompt{+{\ }}{\ }{\ }{\ }{\ }\hlstring{"smooth"}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}
+\end{dummy}
+Thus far we have not analyzed the skills of players yet. Field goals,
+free throws and three pointers are most direct indicators to evaluate
+the performace of players. We also learned through web searches that
+the ratio of assists/turnover is an important indicator to measure
+the performance of the guards. This is, however, impractical for our
+dataset, because 1/4 of players had less than 20 turnovers, which
+could make the ratio unreliable. As we are no experts on basketball,
+we finally decided to only calibrate the performace-related variables
+either by \texttt{gp} or by the corresponding total number. For example,
+\texttt{fgm} is calibrated by \texttt{fga} to get field goal percentage
+\texttt{fgp}, and \texttt{reb} is calibrated by \texttt{gp} to get
+rebounds per game \texttt{rep}, and so on.
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{fgp}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{fgm}\hlkeyword{/}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{fga}{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }filed{\ }goals{\ }success{\ }percentage}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{ftp}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{ftm}\hlkeyword{/}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{fta}{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }free{\ }throws{\ }success{\ }percentage}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{tpp}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{tpm}\hlkeyword{/}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{tpa}{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }3{\ }pointers{\ }success{\ }percentage}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{rep}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{reb}\hlkeyword{/}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{gp}{\ }{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }rebounds{\ }per{\ }game}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{asp}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{asts}\hlkeyword{/}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{gp}{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }assists{\ }per{\ }game}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{stp}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{stl}\hlkeyword{/}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{gp}{\ }{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }steals{\ }per{\ }game}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{blp}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{blk}\hlkeyword{/}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{gp}{\ }{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }blocks{\ }per{\ }game}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{pfp}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{pf}\hlkeyword{/}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{gp}{\ }{\ }{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }fouls{\ }per{\ }game}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{top}{\ }\hlassignement{=}{\ }\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{turnover}\hlkeyword{/}\hlsymbol{bb}\hlkeyword{\usebox{\hlnormalsizeboxdollar}}\hlsymbol{gp}{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }turnovers{\ }per{\ }game}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}
+\end{dummy}
+
+\section{Variable selection via regressions\label{sec:regression}}
+
+After the preliminary exploration in the data mainly through graphics,
+we will use linear regressions to detect the important variables.
+First we just begin with the original variables, then move on to the
+new variables we created in Section \ref{sec:new-variables}.
+
+A simple linear regression on all the variables will result in an
+obvious problem: the coefficients on \texttt{reb} (rebounds) and \texttt{tpm}
+(three pointers made) are \texttt{NA}'s. The former one is easy to
+explain: $reb=oreb+dreb$ (i.e. perfect colinearity); the latter one
+is more difficult for us to explain, however, we finally found out
+this relationship: $pts=2*fgm+ftm+tpm$. We have no idea on why the
+total points were calculated in this way. It seems that the coefficient
+for \texttt{tpm} should be 3. This could be a disastrous error in
+the data, but it is more likely that we do not know enough about basketball
+statistics.
+
+According to the P-values of the coefficients after we removed \texttt{reb}
+and \texttt{tpm} (which were non-estimable), the most significant
+variables are \texttt{gp}, \texttt{oreb}, \texttt{dreb}, \texttt{asts},
+\texttt{stl} and \texttt{turnover}. 
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{fit}{\ }\hlassignement{=}{\ }\hlfunctioncall{lm}\hlkeyword{(}\hlsymbol{salary}{\ }\hlkeyword{\urltilda{}}{\ }\hlsymbol{.}{\ }\hlkeyword{-}{\ }\hlsymbol{reb}{\ }\hlkeyword{-}{\ }\hlsymbol{tpm}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlfunctioncall{subset}\hlkeyword{(}\hlsymbol{bb}\hlkeyword{,}{\ }\hlargument{select}{\ }\hlargument{=}{\ }\hlsymbol{team}\hlkeyword{:}\hlsymbol{salary}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlsymbol{fit.coef}{\ }\hlassignement{=}{\ }\hlfunctioncall{coef}\hlkeyword{(}\hlfunctioncall{summary}\hlkeyword{(}\hlsymbol{fit}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{round}\hlkeyword{(}\hlsymbol{fit.coef}\hlkeyword{[}\hlsymbol{fit.coef}\hlkeyword{[}\hlkeyword{,}{\ }\hlnumber{4}\hlkeyword{]}{\ }\hlkeyword{\usebox{\hlnormalsizeboxlessthan}}{\ }\hlnumber{0.1}\hlkeyword{,}{\ }\hlkeyword{]}\hlkeyword{,}{\ }\hlnumber{2}\hlkeyword{)}{\ }{\ }\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }vars{\ }with{\ }P-value{\ }\usebox{\hlnormalsizeboxlessthan}{\ }0.1}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\begin{Schunk}
+\begin{Soutput}
+              Estimate Std. Error t value Pr(>|t|)
+(Intercept) 4676619.07 1182977.98    3.95     0.00
+gp           -90877.46   18026.72   -5.04     0.00
+oreb         -16884.86    8609.30   -1.96     0.05
+dreb          14463.86    3885.62    3.72     0.00
+asts          12295.06    3531.36    3.48     0.00
+stl          -44879.22   14231.39   -3.15     0.00
+turnover     -28880.60   12303.62   -2.35     0.02
+\end{Soutput}
+
+\end{Schunk}
+\end{dummy}
+Picking variables merely based on P-values is a bad strategy in variable
+selection, because these P-values could change a lot if we remove
+certain variables from the full regression model. AIC (Akaike Information
+Criterion) is generally a better criterion than P-values to evaluate
+a model, because it takes the complexity of models into account. It
+is reasonable to try a stepwise regression based on AIC, yet we can
+see there is a common problem in both of these two regressions:
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{round}\hlkeyword{(}\hlfunctioncall{coef}\hlkeyword{(}\hlfunctioncall{summary}\hlkeyword{(}\hlsymbol{fit1}{\ }\hlassignement{\usebox{\hlnormalsizeboxlessthan}-}{\ }\hlfunctioncall{step}\hlkeyword{(}\hlsymbol{fit}\hlkeyword{,}{\ }\hlargument{trace}{\ }\hlargument{=}{\ }\hlnumber{0}\hlkeyword{)}\hlkeyword{)}\hlkeyword{)}\hlkeyword{,}{\ }\hlnumber{2}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\begin{Schunk}
+\begin{Soutput}
+              Estimate Std. Error t value Pr(>|t|)
+(Intercept) 3520451.09  437769.72    8.04     0.00
+gp           -70892.34   14896.90   -4.76     0.00
+pts          -23660.86   12000.55   -1.97     0.05
+oreb         -17378.22    8014.40   -2.17     0.03
+dreb          17369.20    3379.29    5.14     0.00
+asts          12862.77    3168.13    4.06     0.00
+stl          -40101.24   12009.80   -3.34     0.00
+turnover     -34434.92   11187.93   -3.08     0.00
+pf             9602.71    6547.36    1.47     0.14
+fgm           58293.50   25330.46    2.30     0.02
+fta           30482.96    9880.23    3.09     0.00
+tpa           13925.90    5628.13    2.47     0.01
+\end{Soutput}
+
+\end{Schunk}
+\end{dummy}
+We got 11 variables from the stepwise regression. The problem is interpretability,
+which is not uncommon in multiple regressions. For example, it is
+natural for \texttt{turnover} to have a negative coefficient, since
+it indicates the bad performance of a player, but how can we interpret
+that the coefficient for \texttt{gp} (games played) is negative? While
+it might not be totally unreasonable (other variables held constant,
+the more games one played, the lower salary one got), the model is
+either too complicated or contradictory to what we expected.
+
+To suggest the next step to take, we checked the residual plot and
+QQ plot for the above regression (the one from the stepwise regression);
+see the top two plots in Figure \ref{fig:residual-plot}. The residual
+plot indicated that linearity might be a problem, because there is
+curvature in the plot, which should not exist if salary really has
+a linear relationship with other explanatory variables; the QQ plot
+obviously pointed out that there was a severe departure from normality
+for these residuals. Considering the magnitude of the residuals as
+well as these diagnostic plots, we took the log-transformation on
+the salary variable.
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{round}\hlkeyword{(}\hlfunctioncall{coef}\hlkeyword{(}\hlfunctioncall{summary}\hlkeyword{(}\hlsymbol{fit2}{\ }\hlassignement{\usebox{\hlnormalsizeboxlessthan}-}{\ }\hlfunctioncall{step}\hlkeyword{(}\hlfunctioncall{update}\hlkeyword{(}\hlsymbol{fit}\hlkeyword{,}{\ }\hlfunctioncall{log}\hlkeyword{(}\hlsymbol{salary}\hlkeyword{)}{\ }\hlkeyword{\urltilda{}}{\ }\hlsymbol{.}\hlkeyword{)}\hlkeyword{,}{\ }\hlargument{trace}{\ }\hlargument{=}{\ }\hlnumber{0}\hlkeyword{)}\hlkeyword{)}\hlkeyword{)}\hlkeyword{,}\hspace*{\fill}\\
+\hlstd{}\hlprompt{+{\ }}{\ }{\ }{\ }{\ }\hlnumber{4}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\begin{Schunk}
+\begin{Soutput}
+                Estimate Std. Error t value Pr(>|t|)
+(Intercept)      14.3361     0.1525 94.0001   0.0000
+oreb             -0.0054     0.0018 -2.9893   0.0030
+dreb              0.0043     0.0008  5.0719   0.0000
+asts              0.0015     0.0006  2.5794   0.0103
+ftm               0.0021     0.0008  2.6601   0.0081
+positionForward  -0.4272     0.1506 -2.8370   0.0048
+positionGuard    -0.5283     0.1838 -2.8746   0.0043
+\end{Soutput}
+
+\end{Schunk}
+\end{dummy}
+%
+\begin{figure}
+\begin{dummy}
+
+\begin{center}
+
+\beginpgfgraphicnamed{figure/Rfig-residual-plot}
+\input{figure/Rfig-residual-plot.tikz}
+\endpgfgraphicnamed
+\end{center}
+\end{dummy}
+\caption{Residual plots and QQ plots based on the original scale (top) and
+log-transformed (bottom) salary. These plots suggest that a log-transformation
+is desirable. The bottom-left residual plot seems to have a curvature
+in the tail, however, there are too few observations in that part
+to justify that linearity was seriously violated.\label{fig:residual-plot}}
+
+\end{figure}
+
+
+This time we got fewer explanatory variables, and their coefficients
+do not violate commen sense too much. What's more, we do not need
+to worry about the correctness of \texttt{pts}, since it is not in
+the final model. Other variables held constant, it seems defence is
+better than offence in terms of rebounds, and assists can help a player
+get more salary. Among the three positions, the \texttt{Center} earns
+a higher salary than the \texttt{Forward} and \texttt{Guard}.
+
+So far we have been using absolute indicators, i.e. we have not considered
+conditioning one variable on the other. The exploration in Section
+\ref{sec:new-variables} would have been in vain if we do not try
+regressions on the new variables created there. We also need to take
+\texttt{team} and \texttt{position} into consideration. This time
+we are more lucky (perhaps it is due to more meaningful variables):
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlcomment{\usebox{\hlnormalsizeboxhash}\usebox{\hlnormalsizeboxhash}{\ }ANOVA{\ }on{\ }all{\ }the{\ }explanatory{\ }variables:{\ }most{\ }are}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }{\ }{\ }significant}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{anova}\hlkeyword{(}\hlsymbol{fit3}{\ }\hlassignement{\usebox{\hlnormalsizeboxlessthan}-}{\ }\hlfunctioncall{lm}\hlkeyword{(}\hlfunctioncall{log}\hlkeyword{(}\hlsymbol{salary}\hlkeyword{)}{\ }\hlkeyword{\urltilda{}}{\ }\hlsymbol{.}\hlkeyword{,}{\ }\hlargument{data}{\ }\hlargument{=}{\ }\hlfunctioncall{na.omit}\hlkeyword{(}\hlfunctioncall{subset}\hlkeyword{(}\hlsymbol{bb}\hlkeyword{,}{\ }\hlargument{select}{\ }\hlargument{=}{\ }\hlfunctioncall{c}\hlkeyword{(}\hlsymbol{salary}\hlkeyword{,}\hspace*{\fill}\\
+\hlstd{}\hlprompt{+{\ }}{\ }{\ }{\ }{\ }\hlsymbol{team}\hlkeyword{,}{\ }\hlsymbol{position}\hlkeyword{,}{\ }\hlsymbol{mpg}\hlkeyword{:}\hlsymbol{top}\hlkeyword{)}\hlkeyword{)}\hlkeyword{)}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\begin{Schunk}
+\begin{Soutput}
+Analysis of Variance Table
+
+Response: log(salary)
+           Df  Sum Sq Mean Sq  F value    Pr(>F)    
+team       29  32.078   1.106   1.5634  0.036183 *  
+position    2   5.256   2.628   3.7146  0.025512 *  
+mpg         1 146.661 146.661 207.2845 < 2.2e-16 ***
+fgp         1   6.154   6.154   8.6980  0.003440 ** 
+ftp         1   0.316   0.316   0.4465  0.504507    
+tpp         1   6.367   6.367   8.9992  0.002931 ** 
+rep         1   0.268   0.268   0.3792  0.538505    
+asp         1   5.087   5.087   7.1894  0.007747 ** 
+stp         1   0.140   0.140   0.1972  0.657312    
+blp         1   0.848   0.848   1.1989  0.274429    
+pfp         1   0.148   0.148   0.2087  0.648103    
+top         1   0.014   0.014   0.0197  0.888544    
+Residuals 295 208.723   0.708                       
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+\end{Soutput}
+\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlcomment{\usebox{\hlnormalsizeboxhash}\usebox{\hlnormalsizeboxhash}{\ }a{\ }stepwise{\ }regression{\ }base{\ }on{\ }AIC}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{summary}\hlkeyword{(}\hlsymbol{fit4}{\ }\hlassignement{\usebox{\hlnormalsizeboxlessthan}-}{\ }\hlfunctioncall{step}\hlkeyword{(}\hlsymbol{fit3}\hlkeyword{,}{\ }\hlargument{trace}{\ }\hlargument{=}{\ }\hlnumber{0}\hlkeyword{)}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\begin{Soutput}
+Call:
+lm(formula = log(salary) ~ position + mpg + fgp + ftp + tpp + 
+    asp + blp, data = na.omit(subset(bb, select = c(salary, team, 
+    position, mpg:top))))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.7718 -0.5267  0.0161  0.5971  1.7357 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     14.469122   0.458425  31.563  < 2e-16 ***
+positionForward -0.247164   0.167245  -1.478 0.140407    
+positionGuard   -0.587426   0.203369  -2.888 0.004128 ** 
+mpg              0.050481   0.008351   6.045 4.06e-09 ***
+fgp             -2.500970   0.860302  -2.907 0.003897 ** 
+ftp              0.690322   0.392361   1.759 0.079441 .  
+tpp             -0.644665   0.361732  -1.782 0.075648 .  
+asp              0.130572   0.039225   3.329 0.000971 ***
+blp              0.299366   0.157697   1.898 0.058526 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 0.8643 on 328 degrees of freedom
+Multiple R-squared: 0.4054,	Adjusted R-squared: 0.3909 
+F-statistic: 27.95 on 8 and 328 DF,  p-value: < 2.2e-16 
+\end{Soutput}
+
+\end{Schunk}
+\end{dummy}
+The stepwise regression selected 7 variables at last: position, minutes
+per game, field goals percentage, free throws percentage, three pointers
+percentage, assists and blocks per game. We notice that the residual
+plot is much better than Figure \ref{fig:residual-plot} -- the residuals
+are well spread over the plot (except there is still a little bit
+curvature). Overall this is a satisfactory regression model.
+
+%
+\begin{figure}
+\begin{dummy}
+
+\begin{center}
+
+\beginpgfgraphicnamed{figure/Rfig-residual-new}
+\input{figure/Rfig-residual-new.tikz}
+\endpgfgraphicnamed
+\end{center}
+\end{dummy}
+\caption{The residual plot and QQ plot of residuals: we see huge improvement
+compared to Figure \ref{fig:residual-plot}.\label{fig:residual-new}}
+
+\end{figure}
+
+
+The analysis can go on and on like this, but we do not want to be
+drown in these regressions, so perhaps it is good time to stop and
+make some conclusions.
+
+
+\section{Conclusions}
+
+In this report, we started with a given dataset in which we identified
+a problem that some players served in multiple teams, and we removed
+them in the sequel. After the data cleaning in Section \ref{sec:clean},
+we summarized the data by looking at univariate distributions and
+bivariate scatter plots in Section \ref{sec:summary}; we did not
+find particularly interesting information there, except the positive
+correlations almost everywhere. We began to investigate more variables
+in Section \ref{sec:new-variables} in greater detail, where we found
+the team and position variables were important in terms of isolating
+different groups of patterns. Meanwhile, we created a series of new
+variables based on the original variables, which found good applications
+in Section \ref{sec:regression}. Finally we made some attempts in
+regression models to find out important explanatory variables; six
+performance indicators proved to be useful.
+
+Some additional attempts were not included in this report, but they
+might indicate new directions in the future. For instance, when we
+first looked at Figure \ref{fig:salary-minutes}, we felt it might
+be good to partition the dataset into two groups, since the increasing
+patterns are different before and after 1600 minutes, and we want
+to separate the players that don't play often from the frequent players.
+Regression results showed that eliminating either group of players
+did not aid much in predicting the salary of NBA players. We did not
+make further attempts along this path, because there are too many
+ways to partition the dataset, what's more, a log-transformation has
+almost solved the problem of non-linearity. However, we can still
+consider partitioning the dataset, because there is obvious heterogeneity
+among players.
+
+We also found some background information for players, such as the
+number of years they served in a team. Unfortunately, everything just
+looked similar to Figure \ref{fig:salary-minutes}. In other words,
+the explanatory variables are highly correlated, so we would rather
+stick to the ones given in the dataset.
+
+Returning to the aim of the project, we seem to have missed an important
+part -- measures for the performance of models in terms of predictions.
+A natural way to go is cross-validation. There are still a large amount
+of machine learning techniques which we might have adopted, but we
+did not do them partly due to the requirements of this project. What
+is more important, we are skeptical of the meaning of going that far,
+since all the graphics and numeric results kept on telling us similar
+information -- most variables are highly correlated, and a subset
+of these variables can do a good job to model the salary (e.g. the
+subset we found in Section \ref{sec:regression}). We recognize our
+analysis could be superficial, but sophisticated models do not have
+to beat exploratory analysis plus common sense.
+
+\bibliographystyle{jss}
+\bibliography{0_home_yihui_Downloads_Stat503_Project1_Stat503-Project1-Wang-Zhao-Rowcliffe-Xie}
+
+
+\appendix
+
+\section{R session information}
+
+To ensure reproducibility, we give our R session information here.
+Note this document was compiled using the \textbf{pgfSweave} package
+\citep{pgfSweave} instead of the standard Sweave.
+\begin{dummy}
+\hspace*{\fill}\\
+\hlstd{}\ttfamily\noindent
+\hlprompt{\usebox{\hlnormalsizeboxgreaterthan}{\ }}\hlfunctioncall{sessionInfo}\hlkeyword{(}\hlkeyword{)}\mbox{}
+\normalfont
+\hspace*{\fill}\\
+\hlstd{}\begin{Schunk}
+\begin{Soutput}
+R version 2.12.1 (2010-12-16)
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+locale:
+ [1] LC_CTYPE=en_US.utf8       LC_NUMERIC=C              LC_TIME=en_US.utf8       
+ [4] LC_COLLATE=en_US.utf8     LC_MONETARY=C             LC_MESSAGES=en_US.utf8   
+ [7] LC_PAPER=en_US.utf8       LC_NAME=C                 LC_ADDRESS=C             
+[10] LC_TELEPHONE=C            LC_MEASUREMENT=en_US.utf8 LC_IDENTIFICATION=C      
+
+attached base packages:
+[1] grid      tools     methods   stats     graphics  grDevices utils     datasets 
+[9] base     
+
+other attached packages:
+ [1] ggplot2_0.8.9     proto_0.3-8       reshape_0.8.3     plyr_1.4         
+ [5] pgfSweave_1.1.3   formatR_0.1-9     highlight_0.2-5   parser_0.0-13    
+ [9] Rcpp_0.9.0        codetools_0.2-6   getopt_1.15       cacheSweave_0.4-5
+[13] tikzDevice_0.5.3  stashR_0.3-3      filehash_2.1-1   
+
+loaded via a namespace (and not attached):
+[1] digest_0.4.2
+\end{Soutput}
+
+\end{Schunk}
+\end{dummy}
+
+\end{document}

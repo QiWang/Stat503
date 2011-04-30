@@ -1,0 +1,126 @@
+chunk: setup
+chunkprefix: figure/Rfig-setup
+fig:
+cacheDB:
+time: 2011-01-30 14:15:06
+
+chunk: duplicate-records
+chunkprefix: figure/Rfig-duplicate-records
+fig:
+cacheDB:
+time: 2011-01-30 14:15:08
+
+chunk: duplicate-plot
+chunkprefix: figure/Rfig-duplicate-plot
+fig: figure/Rfig-duplicate-plot.tikz
+cacheDB:
+time: 2011-01-30 14:15:08
+
+chunk: new-data
+chunkprefix: figure/Rfig-new-data
+fig:
+cacheDB:
+time: 2011-01-30 14:15:10
+
+chunk: hist-salary
+chunkprefix: figure/Rfig-hist-salary
+fig: figure/Rfig-hist-salary.tikz
+cacheDB:
+time: 2011-01-30 14:15:10
+
+chunk: salary-minutes
+chunkprefix: figure/Rfig-salary-minutes
+fig: figure/Rfig-salary-minutes.tikz
+cacheDB:
+time: 2011-01-30 14:15:12
+
+chunk: other-salary-plots
+chunkprefix: figure/Rfig-other-salary-plots
+fig:
+cacheDB:
+time: 2011-01-30 14:15:14
+
+chunk: scatterplot-matrix
+chunkprefix: figure/Rfig-scatterplot-matrix
+fig:
+cacheDB:
+time: 2011-01-30 14:15:14
+
+chunk: salary-position
+chunkprefix: figure/Rfig-salary-position
+fig: figure/Rfig-salary-position.tikz
+cacheDB:
+time: 2011-01-30 14:15:14
+
+chunk: salary-minpergp
+chunkprefix: figure/Rfig-salary-minpergp
+fig: figure/Rfig-salary-minpergp.tikz
+cacheDB:
+time: 2011-01-30 14:15:16
+
+chunk: mpg-creation
+chunkprefix: figure/Rfig-mpg-creation
+fig:
+cacheDB:
+time: 2011-01-30 14:15:19
+
+chunk: salary-team
+chunkprefix: figure/Rfig-salary-team
+fig: figure/Rfig-salary-team.tikz
+cacheDB:
+time: 2011-01-30 14:15:19
+
+chunk: salary-points
+chunkprefix: figure/Rfig-salary-points
+fig:
+cacheDB:
+time: 2011-01-30 14:15:36
+
+chunk: performance-pg
+chunkprefix: figure/Rfig-performance-pg
+fig:
+cacheDB:
+time: 2011-01-30 14:15:36
+
+chunk: lm1
+chunkprefix: figure/Rfig-lm1
+fig:
+cacheDB:
+time: 2011-01-30 14:15:37
+
+chunk: lm1-aic
+chunkprefix: figure/Rfig-lm1-aic
+fig:
+cacheDB:
+time: 2011-01-30 14:15:37
+
+chunk: lm1-log
+chunkprefix: figure/Rfig-lm1-log
+fig:
+cacheDB:
+time: 2011-01-30 14:15:38
+
+chunk: residual-plot
+chunkprefix: figure/Rfig-residual-plot
+fig: figure/Rfig-residual-plot.tikz
+cacheDB:
+time: 2011-01-30 14:15:39
+
+chunk: new-var-regression
+chunkprefix: figure/Rfig-new-var-regression
+fig:
+cacheDB:
+time: 2011-01-30 14:15:39
+
+chunk: residual-new
+chunkprefix: figure/Rfig-residual-new
+fig: figure/Rfig-residual-new.tikz
+cacheDB:
+time: 2011-01-30 14:15:39
+
+chunk: sessionInfo
+chunkprefix: figure/Rfig-sessionInfo
+fig:
+cacheDB:
+time: 2011-01-30 14:15:40
+

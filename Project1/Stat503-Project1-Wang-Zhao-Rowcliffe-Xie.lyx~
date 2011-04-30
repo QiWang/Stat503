@@ -1,0 +1,1709 @@
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass literate-article
+\begin_preamble
+\usepackage[nogin]{Sweave}
+\usepackage{tikz}
+\renewcommand{\rmdefault}{ppl}
+\renewcommand{\sfdefault}{aess}
+\renewcommand{\ttdefault}{aett}
+\end_preamble
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "pdfstartview=FitH"
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Flex Sweave Options
+status open
+
+\begin_layout Plain Layout
+
+tidy=TRUE,pdf=FALSE,eps=FALSE,tikz=TRUE,external=TRUE,prefix.string=figure/Rfig
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Scrap
+<<setup,echo=FALSE>>=
+\end_layout
+
+\begin_layout Scrap
+options(width=85,useFancyQuotes=FALSE)
+\end_layout
+
+\begin_layout Scrap
+library(ggplot2)
+\end_layout
+
+\begin_layout Scrap
+theme_set(theme_grey(base_size = 9))
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Title
+Stat503 Project 1: Basketball -- Skills and Salary
+\end_layout
+
+\begin_layout Author
+Qi Wang 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ Yifan Zhao 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ William Rowcliffe 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ Yihui Xie
+\end_layout
+
+\begin_layout Abstract
+In this report, we analyzed a basketball dataset containing statistics for
+ NBA players in 2009, and tried to find out important predictors for the
+ 
+\family typewriter
+salary
+\family default
+ variable.
+ First, we cleaned the dataset, because there are 9 players who served in
+ multiple teams during the year 2009; then we gave a summary of the dataset,
+ including the univariate distributions of some variables, as well as the
+ relationship between salary and many other variables such as the minutes
+ played and the field goals made and so on; these exploratory attempts gave
+ an indication that new variables might be more appropriate in predicting
+ the salary; finally we used linear regressions to do the variable selection
+ to detect most important predictors.
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+We are given a dataset which contains NBA player statistics for the 2008
+ -- 2009 season, and salaries for the 2009 -- 2010 season.
+ Statistics come from the web page 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.databasebasketball.com/stats download.htm
+\end_layout
+
+\end_inset
+
+ and salaries from 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://content.usatoday.com/sportsdata/basketball/nba/salaries/team
+\end_layout
+
+\end_inset
+
+.
+ The goal is to find out a number of predictors which can best predict the
+ salary.
+ Below is a list of variables involved:
+\end_layout
+
+\begin_layout Description
+position: the position the player played in the team (
+\family typewriter
+Center
+\family default
+, 
+\family typewriter
+Forward
+\family default
+, 
+\family typewriter
+Guard
+\family default
+) 
+\end_layout
+
+\begin_layout Description
+team: the code for the name of team 
+\end_layout
+
+\begin_layout Description
+gp: the number of games the player played 
+\end_layout
+
+\begin_layout Description
+minutes: the minutes the player played 
+\end_layout
+
+\begin_layout Description
+oreb: the number of offensive rebounds the player made 
+\end_layout
+
+\begin_layout Description
+dreb: the number of defensive rebounds the player made 
+\end_layout
+
+\begin_layout Description
+rob: the number of rebounds the player made
+\end_layout
+
+\begin_layout Description
+asts: the assists the player made 
+\end_layout
+
+\begin_layout Description
+stl: the steals the player made
+\end_layout
+
+\begin_layout Description
+blk: the blocks the player made 
+\end_layout
+
+\begin_layout Description
+turnover: the turnovers the player made
+\end_layout
+
+\begin_layout Description
+pf: the personal fouls the player made 
+\end_layout
+
+\begin_layout Description
+fga: the field goals the player attempted to make 
+\end_layout
+
+\begin_layout Description
+fgm: the field goals the player made
+\end_layout
+
+\begin_layout Description
+fta: the free throws the player attempted to make 
+\end_layout
+
+\begin_layout Description
+ftm: the free throws the player made
+\end_layout
+
+\begin_layout Description
+tpa: the three pointers the player attempted to make 
+\end_layout
+
+\begin_layout Description
+tpm: the three pointers the player made
+\end_layout
+
+\begin_layout Section
+Data cleaning
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:clean"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A closer look at the data records revealed that there were 9 players who
+ played for more than one team in 2009, for example, Mike Harris played
+ in both Houston Rockets and Washington Wizards.
+ All the 
+\begin_inset Quotes eld
+\end_inset
+
+duplicate
+\begin_inset Quotes erd
+\end_inset
+
+ records are as follows:
+\end_layout
+
+\begin_layout Scrap
+<<duplicate-records>>=
+\end_layout
+
+\begin_layout Scrap
+bb = read.csv('bb-2009-all-correct.csv')
+\end_layout
+
+\begin_layout Scrap
+dup.players = with(bb, ilkid %in% ilkid[duplicated(ilkid)])
+\end_layout
+
+\begin_layout Scrap
+bb[dup.players, c(1:3, 5, 25, 26)]
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Standard
+The naturual question is how to deal with these records, and we decided
+ to remove them due to 3 reasons:
+\end_layout
+
+\begin_layout Enumerate
+the total sample size is 417, and these records are only a small portion
+ of the whole sample;
+\end_layout
+
+\begin_layout Enumerate
+it is hard to decide whether to add their salaries in different teams up
+ or average them or leave them untouched, because we have no clue how these
+ salary values came from -- are they what these players actually got in
+ 2009 or simply the numbers in their contracts with the teams? (we tried
+ to look at the website and the data source remained unclear);
+\end_layout
+
+\begin_layout Enumerate
+most of their salaries are relatively low, which does not contribute much
+ in the salary prediction; Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:duplicate-plot"
+
+\end_inset
+
+ shows that the salaries of these players do not follow the general pattern
+ of 
+\family typewriter
+salary
+\family default
+ vs 
+\family typewriter
+minutes
+\family default
+, and we will know later that the minutes played in a team is an important
+ predictor for salary, so removing them will not affect our prediction much;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Scrap
+<<duplicate-plot,fig=TRUE,width=5,height=3,echo=FALSE>>=
+\end_layout
+
+\begin_layout Scrap
+print(qplot(minutes, salary, data = bb, color = factor(dup.players), size=as.integ
+er(dup.players)) + scale_colour_hue('duplicate')+ scale_size(to=c(1,2),legend
+ = FALSE))
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The players who served in more than one team in 2009: a scatter plot of
+ 
+\family typewriter
+salary
+\family default
+ vs 
+\family typewriter
+minutes
+\family default
+.
+ Note most of these players are in the far bottom-left corner.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:duplicate-plot"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now there are 401 records in the cleaned dataset.
+\end_layout
+
+\begin_layout Scrap
+<<new-data>>=
+\end_layout
+
+\begin_layout Scrap
+bb = bb[!dup.players, -c(4, 6, 7)]
+\end_layout
+
+\begin_layout Scrap
+dim(bb)
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Section
+A summary of the data
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:summary"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Scrap
+<<hist-salary,fig=TRUE,width=4,height=3>>=
+\end_layout
+
+\begin_layout Scrap
+print(qplot(salary,data=bb))
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The distribution of salary: the histogram is severely skewed to the right.
+ The range of salaries is very large, and often there are only a few key
+ players to a team.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:hist-salary"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section we will give a summary of the dataset.
+ Since our direct goal is to predict salary, it is natural to take a look
+ at the distribution of the salary in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:hist-salary"
+
+\end_inset
+
+, which is skewed to the right and has a long tail.
+ This may indicate a log-transformation of the salary data, and we will
+ see later the effects of transformation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Scrap
+<<salary-minutes,fig=TRUE,width=4,height=3>>=
+\end_layout
+
+\begin_layout Scrap
+print(qplot(minutes, salary, data = bb, geom = c('point', 'smooth')))
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A scatter plot of 
+\family typewriter
+salary
+\family default
+ vs 
+\family typewriter
+minutes
+\family default
+ with a smooth curve: the relationship looks linear, but there is a change
+ in the increase of salary with minutes around 
+\begin_inset Formula $minutes\approx1600$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:salary-minutes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:salary-minutes"
+
+\end_inset
+
+ is a scatter plot of 
+\family typewriter
+salary
+\family default
+ vs 
+\family typewriter
+minutes
+\family default
+ with a smooth curve.
+ Here we will start to see a trend that is common throughout this dataset,
+ which is high variance.
+ The increase in salary as a function of the minutes played is true on average,
+ but very uncertain for prediction.
+ It is important to note that the correlation is not completely linear.
+ There is a change in the increase of salary with minutes around 
+\begin_inset Formula $minutes\approx1600$
+\end_inset
+
+; before that the increase gets slower and slower.
+ This sounds like the 
+\begin_inset Quotes eld
+\end_inset
+
+law of diminishing marginal utility
+\begin_inset Quotes erd
+\end_inset
+
+ in economics.
+ However, when the player has played for an enough long time, the speed
+ for the increase will be faster again.
+ 
+\end_layout
+
+\begin_layout Standard
+Similarly we can plot salary agaist other variables such as 
+\family typewriter
+asts
+\family default
+, 
+\family typewriter
+pf
+\family default
+ and 
+\family typewriter
+reb
+\family default
+:
+\end_layout
+
+\begin_layout Scrap
+<<other-salary-plots,eval=FALSE>>=
+\end_layout
+
+\begin_layout Scrap
+qplot(asts, salary, data = bb, geom = c('point', 'smooth')) 
+\end_layout
+
+\begin_layout Scrap
+qplot(pf, salary, data = bb, geom = c('point', 'smooth')) 
+\end_layout
+
+\begin_layout Scrap
+qplot(reb, salary, data = bb, geom = c('point', 'smooth')) 
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Standard
+We will omit the graphics output in this report to save space (the reader
+ can reproduce them using the supplementary R code).
+ As a matter of fact, we can observe similar trends in these three scatter
+ plots, which will be summarized after we briefly describe the three plots.
+\end_layout
+
+\begin_layout Standard
+For the number of assists, the plot exposes a high density of players with
+ fewer assists.
+ It appears that there is a strong positive correlation when assists are
+ fewer than 200.
+ After this point the variance increases greatly and correlation is decreased
+ to almost zero.
+ This makes intuitive sense, because the less dominate players will likely
+ get paid more if they are good support for the higher paid players.
+ Likewise, higher paid players generally should be scoring points and having
+ fewer assists.
+ 
+\end_layout
+
+\begin_layout Standard
+Since some personal fouls can be strategic and others are mistakes of temperamen
+tal players, it is not surprising that this data has a large variace.
+ Since some positions might have more strategic reason to foul, it may be
+ interesting to observe this plot seperated by possition type.
+ 
+\end_layout
+
+\begin_layout Standard
+Once again, we believe the number of rebounds is very dependent on the position.
+ Although we see a possitive correlation in the scatter plot of 
+\family typewriter
+salary
+\family default
+ vs 
+\family typewriter
+reb
+\family default
+, we expect that the possition specific plots will be more clear.
+\end_layout
+
+\begin_layout Standard
+The general pattern is, the salary tends to increase with 
+\family typewriter
+asts
+\family default
+, 
+\family typewriter
+pf
+\family default
+ and 
+\family typewriter
+reb
+\family default
+ if we try to examine the bivariate relationship, and the increase does
+ not strictly follow a linear pattern -- there are 
+\begin_inset Quotes eld
+\end_inset
+
+change points
+\begin_inset Quotes erd
+\end_inset
+
+ in the regression curves, and there seems to be heteroskedasticity, too.
+ We leave these problems to Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:regression"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It will be naive for us to jump to conclusions that players should be encouraged
+ to give more assists or make more fouls to earn a high salary.
+ The main reason that we observed the positive correlation almost everywhere
+ is perhaps all these explanatory variables are positively correlated with
+ the experience of a player, which is reflected in many variables, such
+ as the number of games played.
+ Apparently, the more games one plays, the more experience he will gain,
+ and the more assists and fouls he will tend to make.
+ It is tempting to make causal inference here, but we must always bear in
+ mind that observational data is inappropriate to reveal causality.
+\end_layout
+
+\begin_layout Standard
+A scatter plot matrix would have given a neat illustration on the relationship
+ between variables in this dataset, but again we decided to omit it in the
+ report.
+ The information/ink ratio is too low: too little (unexpected) information
+ is shown in that huge plot.
+\end_layout
+
+\begin_layout Scrap
+<<scatterplot-matrix, eval=FALSE>>=
+\end_layout
+
+\begin_layout Scrap
+## in case the reader be curious about the scatter plot matrix
+\end_layout
+
+\begin_layout Scrap
+plotmatrix(bb[, 5:12])
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Section
+A further exploration of variables
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:new-variables"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Scrap
+<<salary-position,fig=TRUE,width=4,height=3>>=
+\end_layout
+
+\begin_layout Scrap
+print(qplot(position, salary,data=bb,geom="boxplot"))
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Salaries for different positions: the 
+\family typewriter
+Center
+\family default
+ seems to have better salaries.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:salary-position"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Scrap
+<<salary-minpergp,fig=TRUE,width=4,height=3>>=
+\end_layout
+
+\begin_layout Scrap
+print(qplot(minutes/gp, log(salary), data = bb,facets = position~.,geom=c('point'
+,'smooth')))
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Log-salaries vs minutes per game for different positions: the relationship
+ is much more linear compared to the plot on the original scale, and the
+ variance is stabilized as well.
+ Note there is an outlier in the guards.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:salary-minpergp"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As mentioned in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:summary"
+
+\end_inset
+
+, we may check the relationship among variables conditioned on the 
+\family typewriter
+position
+\family default
+.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:salary-position"
+
+\end_inset
+
+ are the boxplots of salaries corresponding to each position; we see the
+ center has a higher salary on average.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:salary-minpergp"
+
+\end_inset
+
+ is a scatter plot of log-salary vs minutes per game for different positions.
+ We took the log-transformation because we found the relationship became
+ more linear and the variance was also stabilized.
+ The absolute number of minutes played might not be an appropriate indicator
+ to evaluate a player, for example, some less important players may have
+ played for a long time in total but contributed only a little in each game,
+ so it is reasonable to calculate the average minutes played in each game.
+ Across all of the positions we see a general increase in salary with minutes
+ per game.
+ The most sensitive position is guard -- they play longer in the game on
+ average (more points clustered in the right part).
+ It is possible that the reason for this is that guards who can stay in
+ a game longer are more valuable.
+ Endurance may not be as important for a player that moves less, like the
+ center.
+ Generally speaking, the speed of increase in log-salary is slowest for
+ the center and fastest for the forward.
+\end_layout
+
+\begin_layout Standard
+This motivated us to create a new variable 
+\family typewriter
+mpg
+\family default
+ (minutes per game), which we will consider in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:regression"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Scrap
+<<mpg-creation>>=
+\end_layout
+
+\begin_layout Scrap
+bb$mpg = bb$minutes/bb$gp   # new variable 'mpg'
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Scrap
+<<salary-team,fig=TRUE,width=6,height=6>>=
+\end_layout
+
+\begin_layout Scrap
+print(qplot(mpg, log(salary), data = bb, geom = c('point', 'smooth'), facets=~te
+am))
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Scatter plots of log-salary vs minutes per game, conditioned on team.
+ The smoothing curves are much more compact than the overall scatter plots,
+ and we can take a closer look at each team to see different policies on
+ the player's salary, e.g.
+ Cavaliers seem to stick strictly to the 
+\begin_inset Quotes eld
+\end_inset
+
+no pain no gain
+\begin_inset Quotes erd
+\end_inset
+
+ rule, but Lakers might have high salary in the beginning, and then they
+ are unable to earn high salary if they have not played intensively enough
+ (the salary dropped down in the half-way!).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:salary-team"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is another categorical 
+\family typewriter
+team
+\family default
+ in the data.
+ We have no reason not to look at it.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:salary-team"
+
+\end_inset
+
+ shows the relationship between log-salary and minutes per game conditioned
+ on 
+\family typewriter
+team
+\family default
+.
+ It revealed a lot of interesting phenomena.
+ For example, CLE Cavaliers can earn higher salary with greater 
+\family typewriter
+mpg
+\family default
+ -- the relationship is fairly linear; whereas LAL Lakers do not necessarily
+ gain higher salary in the beginning, although their 
+\family typewriter
+mpg
+\family default
+ is increasing.
+ There are several other interesting teams, such as Boston Celtics (BOS),
+ Golden State Warriors (GSW) and New York Knicks (NYK).
+ We really feel curious how their salaries were decided, because their curves
+ are really 
+\begin_inset Quotes eld
+\end_inset
+
+wiggly
+\begin_inset Quotes erd
+\end_inset
+
+.
+ There is a player in Washington Wizards who was significantly underpaid;
+ perhaps a scout should keep an eye on this player.
+\end_layout
+
+\begin_layout Standard
+Should we take the team into account when predicting salaries? The answer
+ seems to be 
+\begin_inset Quotes eld
+\end_inset
+
+definitely!
+\begin_inset Quotes erd
+\end_inset
+
+.
+ However, there is a potential danger in doing so, namely overfitting.
+ To put it to an extreme, we can make perfect predictions if we divide the
+ data into enough small chunks.
+ We decided not to make haste for the time being.
+\end_layout
+
+\begin_layout Standard
+We can observe similar patterns in the scatter plots of log-salary vs points
+ per game; the graphics output is omitted.
+\end_layout
+
+\begin_layout Scrap
+<<salary-points,eval=FALSE>>=
+\end_layout
+
+\begin_layout Scrap
+qplot(pts/gp,log(salary),data=bb,facets=~team,geom=c('point','smooth'))
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Standard
+Thus far we have not analyzed the skills of players yet.
+ Field goals, free throws and three pointers are most direct indicators
+ to evaluate the performace of players.
+ We also learned through web searches that the ratio of assists/turnover
+ is an important indicator to measure the performance of the guards.
+ This is, however, impractical for our dataset, because 1/4 of players had
+ less than 20 turnovers, which could make the ratio unreliable.
+ As we are no experts on basketball, we finally decided to only calibrate
+ the performace-related variables either by 
+\family typewriter
+gp
+\family default
+ or by the corresponding total number.
+ For example, 
+\family typewriter
+fgm
+\family default
+ is calibrated by 
+\family typewriter
+fga
+\family default
+ to get field goal percentage 
+\family typewriter
+fgp
+\family default
+, and 
+\family typewriter
+reb
+\family default
+ is calibrated by 
+\family typewriter
+gp
+\family default
+ to get rebounds per game 
+\family typewriter
+rep
+\family default
+, and so on.
+\end_layout
+
+\begin_layout Scrap
+<<performance-pg>>=
+\end_layout
+
+\begin_layout Scrap
+bb$fgp = bb$fgm/bb$fga  # filed goals success percentage
+\end_layout
+
+\begin_layout Scrap
+bb$ftp = bb$ftm/bb$fta  # free throws success percentage
+\end_layout
+
+\begin_layout Scrap
+bb$tpp = bb$tpm/bb$tpa  # 3 pointers success percentage
+\end_layout
+
+\begin_layout Scrap
+bb$rep = bb$reb/bb$gp   # rebounds per game
+\end_layout
+
+\begin_layout Scrap
+bb$asp = bb$asts/bb$gp  # assists per game
+\end_layout
+
+\begin_layout Scrap
+bb$stp = bb$stl/bb$gp   # steals per game
+\end_layout
+
+\begin_layout Scrap
+bb$blp = bb$blk/bb$gp   # blocks per game
+\end_layout
+
+\begin_layout Scrap
+bb$pfp = bb$pf/bb$gp    # fouls per game
+\end_layout
+
+\begin_layout Scrap
+bb$top = bb$turnover/bb$gp  # turnovers per game
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Section
+Variable selection via regressions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:regression"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After the preliminary exploration in the data mainly through graphics, we
+ will use linear regressions to detect the important variables.
+ First we just begin with the original variables, then move on to the new
+ variables we created in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:new-variables"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A simple linear regression on all the variables will result in an obvious
+ problem: the coefficients on 
+\family typewriter
+reb
+\family default
+ (rebounds) and 
+\family typewriter
+tpm
+\family default
+ (three pointers made) are 
+\family typewriter
+NA
+\family default
+'s.
+ The former one is easy to explain: 
+\begin_inset Formula $reb=oreb+dreb$
+\end_inset
+
+ (i.e.
+ perfect colinearity); the latter one is more difficult for us to explain,
+ however, we finally found out this relationship: 
+\begin_inset Formula $pts=2*fgm+ftm+tpm$
+\end_inset
+
+.
+ We have no idea on why the total points were calculated in this way.
+ It seems that the coefficient for 
+\family typewriter
+tpm
+\family default
+ should be 3.
+ This could be a disastrous error in the data, but it is more likely that
+ we do not know enough about basketball statistics.
+\end_layout
+
+\begin_layout Standard
+According to the P-values of the coefficients after we removed 
+\family typewriter
+reb
+\family default
+ and 
+\family typewriter
+tpm
+\family default
+ (which were non-estimable), the most significant variables are 
+\family typewriter
+gp
+\family default
+, 
+\family typewriter
+oreb
+\family default
+, 
+\family typewriter
+dreb
+\family default
+, 
+\family typewriter
+asts
+\family default
+, 
+\family typewriter
+stl
+\family default
+ and 
+\family typewriter
+turnover
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Scrap
+<<lm1>>=
+\end_layout
+
+\begin_layout Scrap
+fit = lm(salary ~ .
+ - reb - tpm, data = subset(bb, select = team:salary))
+\end_layout
+
+\begin_layout Scrap
+fit.coef = coef(summary(fit))
+\end_layout
+
+\begin_layout Scrap
+round(fit.coef[fit.coef[, 4] < .1, ], 2)  # vars with P-value < 0.1
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Standard
+Picking variables merely based on P-values is a bad strategy in variable
+ selection, because these P-values could change a lot if we remove certain
+ variables from the full regression model.
+ AIC (Akaike Information Criterion) is generally a better criterion than
+ P-values to evaluate a model, because it takes the complexity of models
+ into account.
+ It is reasonable to try a stepwise regression based on AIC, yet we can
+ see there is a common problem in both of these two regressions:
+\end_layout
+
+\begin_layout Scrap
+<<lm1-aic>>=
+\end_layout
+
+\begin_layout Scrap
+round(coef(summary(fit1<-step(fit, trace=0))), 2)
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Standard
+We got 11 variables from the stepwise regression.
+ The problem is interpretability, which is not uncommon in multiple regressions.
+ For example, it is natural for 
+\family typewriter
+turnover
+\family default
+ to have a negative coefficient, since it indicates the bad performance
+ of a player, but how can we interpret that the coefficient for 
+\family typewriter
+gp
+\family default
+ (games played) is negative? While it might not be totally unreasonable
+ (other variables held constant, the more games one played, the lower salary
+ one got), the model is either too complicated or contradictory to what
+ we expected.
+\end_layout
+
+\begin_layout Standard
+To suggest the next step to take, we checked the residual plot and QQ plot
+ for the above regression (the one from the stepwise regression); see the
+ top two plots in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:residual-plot"
+
+\end_inset
+
+.
+ The residual plot indicated that linearity might be a problem, because
+ there is curvature in the plot, which should not exist if salary really
+ has a linear relationship with other explanatory variables; the QQ plot
+ obviously pointed out that there was a severe departure from normality
+ for these residuals.
+ Considering the magnitude of the residuals as well as these diagnostic
+ plots, we took the log-transformation on the salary variable.
+\end_layout
+
+\begin_layout Scrap
+<<lm1-log>>=
+\end_layout
+
+\begin_layout Scrap
+round(coef(summary(fit2<-step(update(fit, log(salary)~.), trace=0)) ), 4)
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Scrap
+<<residual-plot,fig=TRUE,width=5.5,height=5.5,echo=FALSE>>=
+\end_layout
+
+\begin_layout Scrap
+par(mfrow=c(2,2),mar=c(4,4,1,.5),mgp=c(2,.9,0))
+\end_layout
+
+\begin_layout Scrap
+plot(fit1, which=1:2)
+\end_layout
+
+\begin_layout Scrap
+plot(fit2, which=1:2) 
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Residual plots and QQ plots based on the original scale (top) and log-transforme
+d (bottom) salary.
+ These plots suggest that a log-transformation is desirable.
+ The bottom-left residual plot seems to have a curvature in the tail, however,
+ there are too few observations in that part to justify that linearity was
+ seriously violated.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:residual-plot"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This time we got fewer explanatory variables, and their coefficients do
+ not violate commen sense too much.
+ What's more, we do not need to worry about the correctness of 
+\family typewriter
+pts
+\family default
+, since it is not in the final model.
+ Other variables held constant, it seems defence is better than offence
+ in terms of rebounds, and assists can help a player get more salary.
+ Among the three positions, the 
+\family typewriter
+Center
+\family default
+ earns a higher salary than the 
+\family typewriter
+Forward
+\family default
+ and 
+\family typewriter
+Guard
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+So far we have been using absolute indicators, i.e.
+ we have not considered conditioning one variable on the other.
+ The exploration in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:new-variables"
+
+\end_inset
+
+ would have been in vain if we do not try regressions on the new variables
+ created there.
+ We also need to take 
+\family typewriter
+team
+\family default
+ and 
+\family typewriter
+position
+\family default
+ into consideration.
+ This time we are more lucky (perhaps it is due to more meaningful variables):
+\end_layout
+
+\begin_layout Scrap
+<<new-var-regression>>=
+\end_layout
+
+\begin_layout Scrap
+## ANOVA on all the explanatory variables: most are significant
+\end_layout
+
+\begin_layout Scrap
+anova(fit3<-lm(log(salary)~.,data=na.omit(subset(bb, select=c(salary, team,
+ position, mpg:top)))))
+\end_layout
+
+\begin_layout Scrap
+## a stepwise regression base on AIC
+\end_layout
+
+\begin_layout Scrap
+summary(fit4<-step(fit3, trace=0))
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Standard
+The stepwise regression selected 7 variables at last: position, minutes
+ per game, field goals percentage, free throws percentage, three pointers
+ percentage, assists and blocks per game.
+ We notice that the residual plot is much better than Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:residual-plot"
+
+\end_inset
+
+ -- the residuals are well spread over the plot (except there is still a
+ little curvature).
+ Overall this is a satisfactory regression model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Scrap
+<<residual-new,fig=TRUE,width=5.5,height=2.75,echo=FALSE>>=
+\end_layout
+
+\begin_layout Scrap
+par(mfrow=c(1,2),mar=c(4,4,1,.5),mgp=c(2,.9,0))
+\end_layout
+
+\begin_layout Scrap
+plot(fit4, which=1:2)
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The residual plot and QQ plot of residuals: we see huge improvement compared
+ to Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:residual-plot"
+
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:residual-new"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The analysis can go on and on like this, but we do not want to be drown
+ in these regressions, so perhaps it is good time to stop and make some
+ conclusions.
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+In this report, we started with a given dataset in which we identified a
+ problem that some players served in multiple teams, and we removed them
+ in the sequel.
+ After the data cleaning in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:clean"
+
+\end_inset
+
+, we summarized the data by looking at univariate distributions and bivariate
+ scatter plots in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:summary"
+
+\end_inset
+
+; we did not find particularly interesting information there, except the
+ positive correlations almost everywhere.
+ We began to investigate more variables in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:new-variables"
+
+\end_inset
+
+ in greater detail, where we found the team and position variables were
+ important in terms of isolating different groups of patterns.
+ Meanwhile, we created a series of new variables based on the original variables
+, which found good applications in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:regression"
+
+\end_inset
+
+.
+ Finally we made some attempts in regression models to find out important
+ explanatory variables; six performance indicators proved to be useful.
+\end_layout
+
+\begin_layout Standard
+Some additional attempts were not included in this report, but they might
+ indicate new directions in the future.
+ For instance, when we first looked at Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:salary-minutes"
+
+\end_inset
+
+, we felt it might be good to partition the dataset into two groups, since
+ the increasing patterns are different before and after 1600 minutes, and
+ we want to separate the players that don't play often from the frequent
+ players.
+ Regression results showed that eliminating either group of players did
+ not aid much in predicting the salary of NBA players.
+ We did not make further attempts along this path, because there are too
+ many ways to partition the dataset, what's more, a log-transformation has
+ almost solved the problem of non-linearity.
+ However, we can still consider partitioning the dataset, because there
+ is obvious heterogeneity among players.
+\end_layout
+
+\begin_layout Standard
+We also found some background information for players, such as the number
+ of years they served in a team.
+ Unfortunately, everything just looked similar to Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:salary-minutes"
+
+\end_inset
+
+.
+ In other words, the explanatory variables are highly correlated, so we
+ would rather stick to the ones given in the dataset.
+\end_layout
+
+\begin_layout Standard
+Returning to the aim of the project, we seem to have missed an important
+ part -- measures for the performance of models in terms of predictions.
+ A natural way to go is cross-validation.
+ There are still a large amount of machine learning techniques which we
+ might have adopted, but we did not do them partly due to the requirements
+ of this project.
+ What is more important, we are skeptical of the meaning of going that far,
+ since all the graphics and numeric results kept on telling us similar informati
+on -- most variables are highly correlated, and a subset of these variables
+ can do a good job to model the salary (e.g.
+ the subset we found in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:regression"
+
+\end_inset
+
+).
+ We recognize our analysis could be superficial, but sophisticated models
+ do not have to beat exploratory analysis plus common sense.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "Stat503-Project1-Wang-Zhao-Rowcliffe-Xie"
+options "jss"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+R session information
+\end_layout
+
+\begin_layout Standard
+To ensure reproducibility, we give our R session information here.
+ Note this document was compiled using the 
+\series bold
+pgfSweave
+\series default
+ package 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pgfSweave"
+
+\end_inset
+
+ instead of the standard Sweave.
+\end_layout
+
+\begin_layout Scrap
+<<sessionInfo>>=
+\end_layout
+
+\begin_layout Scrap
+sessionInfo()
+\end_layout
+
+\begin_layout Scrap
+@
+\end_layout
+
+\end_body
+\end_document

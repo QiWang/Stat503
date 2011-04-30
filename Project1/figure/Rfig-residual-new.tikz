@@ -1,0 +1,1948 @@
+% Created by tikzDevice version 0.5.3 on 2011-01-30 14:15:39
+\begin{tikzpicture}[x=1pt,y=1pt]
+\draw[color=white,opacity=0] (0,0) rectangle (397.48,198.74);
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (397.48,198.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 50.35, 48.00) -- (180.98, 48.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 50.35, 48.00) -- ( 50.35, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 69.01, 48.00) -- ( 69.01, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 87.67, 48.00) -- ( 87.67, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (106.33, 48.00) -- (106.33, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (125.00, 48.00) -- (125.00, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (143.66, 48.00) -- (143.66, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (162.32, 48.00) -- (162.32, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (180.98, 48.00) -- (180.98, 42.00);
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at ( 50.35, 25.20) {13.0%
+};
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at ( 87.67, 25.20) {14.0%
+};
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (125.00, 25.20) {15.0%
+};
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (162.32, 25.20) {16.0%
+};
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 48.00, 57.41) -- ( 48.00,178.06);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 48.00, 57.41) -- ( 42.00, 57.41);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 48.00, 77.52) -- ( 42.00, 77.52);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 48.00, 97.63) -- ( 42.00, 97.63);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 48.00,117.73) -- ( 42.00,117.73);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 48.00,137.84) -- ( 42.00,137.84);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 48.00,157.95) -- ( 42.00,157.95);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 48.00,178.06) -- ( 42.00,178.06);
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at ( 37.20, 57.41) {-4%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at ( 37.20, 77.52) {-3%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at ( 37.20, 97.63) {-2%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at ( 37.20,117.73) {-1%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at ( 37.20,137.84) {0%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at ( 37.20,157.95) {1%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at ( 37.20,178.06) {2%
+};
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 48.00, 48.00) --
+	(192.74, 48.00) --
+	(192.74,186.74) --
+	( 48.00,186.74) --
+	( 48.00, 48.00);
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (198.74,198.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (120.37, 12.00) {Fitted values%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at ( 24.00,117.37) {Residuals%
+};
+\end{scope}
+\begin{scope}
+\path[clip] ( 48.00, 48.00) rectangle (192.74,186.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (111.88,122.76) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (149.15,136.51) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (107.02,142.79) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 98.18,133.75) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (136.20,166.96) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 92.70,149.85) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (138.79,135.92) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 98.68,125.06) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (126.14,139.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (106.36,140.94) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (101.27,132.34) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (159.46,150.93) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (162.59,149.76) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (161.51,129.89) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 87.73,154.82) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (111.61,123.29) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (104.36,126.13) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (104.93,142.23) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (118.56,140.24) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 90.96,147.40) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 75.36,171.25) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (102.22,164.24) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (159.39,133.22) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (122.91,124.60) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (154.36,136.94) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (103.83,162.41) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (119.52,119.23) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (103.70,140.82) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (137.46,138.16) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 97.12,137.83) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (106.49,120.13) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (128.23,149.03) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (151.37,149.95) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (101.69,123.31) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (127.36,143.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (145.07,125.30) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (113.58,120.83) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (171.04,135.52) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (115.82,142.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (149.77,156.15) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (102.44,129.70) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (145.85,157.05) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (136.56,129.32) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (149.31,103.18) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 84.35,120.20) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 98.12,156.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (106.26,119.57) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (154.25,159.73) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (111.11,115.04) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (143.76,150.28) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (149.61,121.24) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (130.12,107.41) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (129.67,153.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (162.86,138.14) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (102.20,123.16) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 99.78,127.81) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 80.64,169.04) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (106.47,129.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (132.19,166.05) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (118.45,120.66) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (122.30,109.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (151.61,104.26) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 89.33,144.68) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (131.64,115.19) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 83.49,139.75) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 85.11,136.20) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (101.52,163.53) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (139.67,133.40) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 75.64, 91.43) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 87.95,159.18) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (129.31,156.67) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 92.49,115.82) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (152.04,119.51) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (116.68,168.67) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 89.50,146.99) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (168.51,139.25) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (111.67,143.29) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 93.61,147.68) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 98.02,138.96) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (129.94,136.55) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (153.86,145.50) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (109.79,139.00) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (156.87,141.04) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 79.54,149.65) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (103.83,150.62) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 98.93,127.99) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (100.30,139.55) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (116.25,124.13) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (144.80,139.49) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (152.88,161.33) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (123.47,160.70) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (165.54,123.71) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 96.41,129.50) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (160.81,142.95) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (102.48,144.58) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (155.80,123.24) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 93.81,132.37) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (143.34,138.43) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (117.19,121.31) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 86.45,131.99) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (105.16,143.14) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (125.81,144.70) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (133.10,131.55) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (126.66,156.16) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (114.07,155.97) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (121.58,141.48) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (132.12,124.02) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 65.12,120.09) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (148.40,124.10) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (113.72,155.45) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (142.65,160.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (164.97,116.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (171.75,143.43) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (157.04,120.65) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 71.53, 84.08) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (101.97,137.89) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 89.55,161.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 82.27,137.61) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (137.10,155.22) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (125.57,160.02) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (136.44,127.25) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 99.71,163.18) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 70.76,139.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (161.00,140.79) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 71.70,127.02) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (115.02,118.81) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (152.38,124.56) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (105.69,150.63) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 82.44,121.23) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (106.29,134.75) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 60.86,142.43) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 57.90,147.03) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (145.47,152.32) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (122.49,127.84) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (112.24,148.79) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (135.55,154.70) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (160.31,137.79) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (123.71,144.28) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (118.43,132.12) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (144.29,139.66) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 97.48,126.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 83.54,149.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (141.31,114.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (108.94,129.85) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (145.84,148.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (121.73,117.36) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (134.96,130.75) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (144.05,149.03) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (119.12,125.54) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (111.68,136.90) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (140.08,135.26) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (120.98,137.33) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (168.30,144.34) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (121.46,163.95) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (116.38,124.04) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (118.75, 90.40) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (124.46,135.72) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (102.60,107.31) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (112.67,126.04) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 99.12,129.59) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (162.22,144.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (123.27,118.45) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (117.31,133.08) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (138.43,107.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 76.47,141.15) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (127.01,145.30) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 85.58,129.11) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (165.88,132.91) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (187.38,135.89) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 87.88,171.56) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (128.21,161.65) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 97.86,122.49) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (160.50,144.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (137.35,160.72) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (124.51,151.82) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (152.45,114.80) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (121.98, 99.93) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (145.62,124.91) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 99.49,153.90) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 93.45,143.93) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 97.59,138.17) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (148.64,155.71) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (119.36,135.49) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (103.37,155.10) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (108.50,132.61) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (100.33,115.29) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (164.91,137.79) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 87.55,170.93) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (171.19,131.20) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (142.39,160.96) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 90.27,166.13) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (125.12,147.33) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (140.76,127.63) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 98.51,135.61) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (131.30,115.35) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (168.70,129.61) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (140.15,163.99) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (179.30,101.13) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (136.12,132.65) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (130.08,125.57) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (140.18,143.40) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (130.27, 62.00) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (146.49,157.71) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (138.34,153.50) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (105.94,151.03) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (106.27,108.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (109.58,154.69) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (100.93,132.56) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (140.35,136.61) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 91.19,128.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (120.24,110.43) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (124.53,122.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (134.27,171.62) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 84.75,131.85) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 79.75,129.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (121.53,142.20) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (145.36,143.68) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (143.19,142.56) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (137.50,157.67) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (130.84,156.93) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (134.55,149.91) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 56.65,135.13) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (107.69,145.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (116.47,112.47) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (139.95,154.27) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 96.38,151.53) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (167.08,143.12) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (134.68,149.59) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 85.83,130.58) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (159.16,155.65) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 81.52,134.30) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (146.25,155.85) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (150.10,144.68) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 95.40,135.34) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (149.53,163.87) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (129.64,172.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (125.30,141.73) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (109.63,153.63) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (100.34,141.14) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (118.33,137.17) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (137.48,158.24) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (174.88,139.52) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 80.31,146.25) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (107.74,132.11) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (139.97,137.29) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 99.82,162.93) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (101.15,124.41) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (147.73,161.81) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (100.28,160.85) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (127.59,148.76) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 89.04,130.25) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 96.26,113.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 94.21,135.10) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (145.09,150.14) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 91.07,133.75) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (124.11,152.04) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (136.64,119.98) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (148.14,157.31) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (124.82,171.14) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (106.14,145.17) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (121.37,168.06) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (125.24,157.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (113.45,157.88) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 88.94,161.33) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (104.19,138.05) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (164.95,107.37) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (153.42,131.80) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (146.98,129.61) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (122.85,128.45) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (153.74,135.96) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 93.92,155.46) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (138.22,131.41) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (133.57,129.82) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (113.38,146.43) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (114.99,166.81) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (148.76,101.82) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 95.81,136.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 98.56,133.64) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (176.02,134.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (121.67,150.13) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (108.79,153.11) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (110.41,132.05) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (106.23,116.27) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 91.01,159.62) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (139.63,158.31) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (141.20,159.84) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (151.01,111.89) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 93.53,115.26) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 82.99,130.87) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 91.73,138.33) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (107.60,141.82) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (139.00,151.91) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (135.37,139.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (146.06,116.97) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (127.00,125.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (110.69,106.01) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (117.76,146.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (151.39,143.99) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (103.67,123.46) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (133.13,145.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 73.32,130.63) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (133.21,146.81) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (123.38,152.54) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 79.95,168.65) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (163.14,148.95) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (104.33,119.00) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (140.09,111.27) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (161.72,139.51) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (137.25,142.95) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 90.37,162.56) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (112.38,142.91) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (118.69,117.43) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (137.15,128.18) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 94.58,127.63) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 98.20,122.31) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (167.01,118.00) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (156.14,141.59) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (123.01,144.21) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 53.36,136.85) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (105.35,148.62) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 66.09,107.92) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (174.19,139.89) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (109.43,127.79) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 99.81,121.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (131.78,142.62) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (148.52,145.22) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (136.65,148.26) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (127.65, 70.17) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (101.76,136.36) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 94.14,127.50) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (127.48,127.22) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (101.17,138.68) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (116.44,137.95) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 87.00,148.43) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 95.68,140.67) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (106.26,120.23) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (131.41,125.54) circle (  2.25);
+\definecolor[named]{drawColor}{rgb}{1.00,0.00,0.00}
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] ( 53.36,139.62) --
+	( 56.65,139.62) --
+	( 57.90,139.61) --
+	( 60.86,139.59) --
+	( 65.12,139.53) --
+	( 66.09,139.50) --
+	( 70.76,139.37) --
+	( 71.53,139.34) --
+	( 71.70,139.34) --
+	( 73.32,139.28) --
+	( 75.36,139.20) --
+	( 75.64,139.19) --
+	( 76.47,139.15) --
+	( 79.54,139.03) --
+	( 79.75,139.02) --
+	( 79.95,139.01) --
+	( 80.31,139.00) --
+	( 80.64,138.99) --
+	( 81.52,138.95) --
+	( 82.27,138.92) --
+	( 82.44,138.92) --
+	( 82.99,138.90) --
+	( 83.49,138.88) --
+	( 83.54,138.88) --
+	( 84.35,138.85) --
+	( 84.75,138.84) --
+	( 85.11,138.83) --
+	( 85.58,138.81) --
+	( 85.83,138.81) --
+	( 86.45,138.79) --
+	( 87.00,138.77) --
+	( 87.55,138.76) --
+	( 87.73,138.75) --
+	( 87.88,138.75) --
+	( 87.95,138.75) --
+	( 88.94,138.72) --
+	( 89.04,138.72) --
+	( 89.33,138.72) --
+	( 89.50,138.71) --
+	( 89.55,138.71) --
+	( 90.27,138.70) --
+	( 90.37,138.69) --
+	( 90.96,138.68) --
+	( 91.01,138.68) --
+	( 91.07,138.68) --
+	( 91.19,138.67) --
+	( 91.73,138.66) --
+	( 92.49,138.64) --
+	( 92.70,138.64) --
+	( 93.45,138.61) --
+	( 93.53,138.61) --
+	( 93.61,138.61) --
+	( 93.81,138.60) --
+	( 93.92,138.59) --
+	( 94.14,138.58) --
+	( 94.21,138.58) --
+	( 94.58,138.56) --
+	( 95.40,138.51) --
+	( 95.68,138.50) --
+	( 95.81,138.49) --
+	( 96.26,138.46) --
+	( 96.38,138.45) --
+	( 96.41,138.45) --
+	( 97.12,138.40) --
+	( 97.48,138.37) --
+	( 97.59,138.36) --
+	( 97.86,138.33) --
+	( 98.02,138.32) --
+	( 98.12,138.31) --
+	( 98.18,138.31) --
+	( 98.20,138.30) --
+	( 98.51,138.27) --
+	( 98.56,138.27) --
+	( 98.68,138.26) --
+	( 98.93,138.23) --
+	( 99.12,138.21) --
+	( 99.49,138.17) --
+	( 99.71,138.14) --
+	( 99.78,138.14) --
+	( 99.81,138.13) --
+	( 99.82,138.13) --
+	(100.28,138.08) --
+	(100.30,138.07) --
+	(100.33,138.07) --
+	(100.34,138.07) --
+	(100.93,138.00) --
+	(101.15,137.98) --
+	(101.17,137.98) --
+	(101.27,137.96) --
+	(101.52,137.94) --
+	(101.69,137.91) --
+	(101.76,137.90) --
+	(101.97,137.88) --
+	(102.20,137.85) --
+	(102.22,137.84) --
+	(102.44,137.81) --
+	(102.48,137.81) --
+	(102.60,137.79) --
+	(103.37,137.70) --
+	(103.67,137.66) --
+	(103.70,137.65) --
+	(103.83,137.64) --
+	(103.83,137.64) --
+	(104.19,137.59) --
+	(104.33,137.58) --
+	(104.36,137.57) --
+	(104.93,137.50) --
+	(105.16,137.48) --
+	(105.35,137.46) --
+	(105.69,137.43) --
+	(105.94,137.41) --
+	(106.14,137.39) --
+	(106.23,137.38) --
+	(106.26,137.38) --
+	(106.26,137.38) --
+	(106.27,137.38) --
+	(106.29,137.37) --
+	(106.36,137.37) --
+	(106.47,137.36) --
+	(106.49,137.36) --
+	(107.02,137.30) --
+	(107.60,137.25) --
+	(107.69,137.24) --
+	(107.74,137.23) --
+	(108.50,137.18) --
+	(108.79,137.16) --
+	(108.94,137.15) --
+	(109.43,137.16) --
+	(109.58,137.16) --
+	(109.63,137.16) --
+	(109.79,137.17) --
+	(110.41,137.18) --
+	(110.69,137.18) --
+	(111.11,137.19) --
+	(111.61,137.23) --
+	(111.67,137.23) --
+	(111.68,137.23) --
+	(111.88,137.25) --
+	(112.24,137.28) --
+	(112.38,137.29) --
+	(112.67,137.31) --
+	(113.38,137.35) --
+	(113.45,137.36) --
+	(113.58,137.37) --
+	(113.72,137.39) --
+	(114.07,137.44) --
+	(114.99,137.62) --
+	(115.02,137.63) --
+	(115.82,137.76) --
+	(116.25,137.83) --
+	(116.38,137.85) --
+	(116.44,137.86) --
+	(116.47,137.87) --
+	(116.68,137.90) --
+	(117.19,137.99) --
+	(117.31,138.01) --
+	(117.76,138.09) --
+	(118.33,138.18) --
+	(118.43,138.20) --
+	(118.45,138.20) --
+	(118.56,138.22) --
+	(118.69,138.24) --
+	(118.75,138.24) --
+	(119.12,138.30) --
+	(119.36,138.33) --
+	(119.52,138.35) --
+	(120.24,138.48) --
+	(120.98,138.61) --
+	(121.37,138.68) --
+	(121.46,138.69) --
+	(121.53,138.71) --
+	(121.58,138.71) --
+	(121.67,138.73) --
+	(121.73,138.74) --
+	(121.98,138.78) --
+	(122.30,138.82) --
+	(122.49,138.85) --
+	(122.85,138.91) --
+	(122.91,138.92) --
+	(123.01,138.94) --
+	(123.27,138.98) --
+	(123.38,139.00) --
+	(123.47,139.02) --
+	(123.71,139.06) --
+	(124.11,139.13) --
+	(124.46,139.20) --
+	(124.51,139.21) --
+	(124.53,139.21) --
+	(124.82,139.27) --
+	(125.12,139.32) --
+	(125.24,139.35) --
+	(125.30,139.36) --
+	(125.57,139.41) --
+	(125.81,139.46) --
+	(126.14,139.52) --
+	(126.66,139.61) --
+	(127.00,139.67) --
+	(127.01,139.68) --
+	(127.36,139.74) --
+	(127.48,139.76) --
+	(127.59,139.78) --
+	(127.65,139.79) --
+	(128.21,139.87) --
+	(128.23,139.87) --
+	(129.31,140.02) --
+	(129.64,140.07) --
+	(129.67,140.07) --
+	(129.94,140.10) --
+	(130.08,140.12) --
+	(130.12,140.13) --
+	(130.27,140.15) --
+	(130.84,140.21) --
+	(131.30,140.26) --
+	(131.41,140.27) --
+	(131.64,140.29) --
+	(131.78,140.31) --
+	(132.12,140.34) --
+	(132.19,140.35) --
+	(133.10,140.41) --
+	(133.13,140.42) --
+	(133.21,140.42) --
+	(133.57,140.45) --
+	(134.27,140.51) --
+	(134.55,140.54) --
+	(134.68,140.54) --
+	(134.96,140.55) --
+	(135.37,140.56) --
+	(135.55,140.57) --
+	(136.12,140.58) --
+	(136.20,140.59) --
+	(136.44,140.59) --
+	(136.56,140.59) --
+	(136.64,140.60) --
+	(136.65,140.60) --
+	(137.10,140.58) --
+	(137.15,140.58) --
+	(137.25,140.58) --
+	(137.35,140.57) --
+	(137.46,140.57) --
+	(137.48,140.57) --
+	(137.50,140.57) --
+	(138.22,140.57) --
+	(138.34,140.58) --
+	(138.43,140.58) --
+	(138.79,140.58) --
+	(139.00,140.57) --
+	(139.63,140.53) --
+	(139.67,140.53) --
+	(139.95,140.51) --
+	(139.97,140.51) --
+	(140.08,140.50) --
+	(140.09,140.50) --
+	(140.15,140.50) --
+	(140.18,140.50) --
+	(140.35,140.49) --
+	(140.76,140.46) --
+	(141.20,140.43) --
+	(141.31,140.42) --
+	(142.39,140.31) --
+	(142.65,140.28) --
+	(143.19,140.23) --
+	(143.34,140.21) --
+	(143.76,140.16) --
+	(144.05,140.13) --
+	(144.29,140.10) --
+	(144.80,140.04) --
+	(145.07,140.01) --
+	(145.09,140.01) --
+	(145.36,139.98) --
+	(145.47,139.96) --
+	(145.62,139.95) --
+	(145.84,139.92) --
+	(145.85,139.92) --
+	(146.06,139.89) --
+	(146.25,139.87) --
+	(146.49,139.84) --
+	(146.98,139.77) --
+	(147.73,139.68) --
+	(148.14,139.62) --
+	(148.40,139.58) --
+	(148.52,139.57) --
+	(148.64,139.55) --
+	(148.76,139.54) --
+	(149.15,139.48) --
+	(149.31,139.46) --
+	(149.53,139.43) --
+	(149.61,139.42) --
+	(149.77,139.39) --
+	(150.10,139.35) --
+	(151.01,139.21) --
+	(151.37,139.16) --
+	(151.39,139.16) --
+	(151.61,139.13) --
+	(152.04,139.06) --
+	(152.38,139.01) --
+	(152.45,139.00) --
+	(152.88,138.94) --
+	(153.42,138.85) --
+	(153.74,138.81) --
+	(153.86,138.79) --
+	(154.25,138.73) --
+	(154.36,138.71) --
+	(155.80,138.49) --
+	(156.14,138.43) --
+	(156.87,138.32) --
+	(157.04,138.29) --
+	(159.16,137.95) --
+	(159.39,137.92) --
+	(159.46,137.90) --
+	(160.31,137.77) --
+	(160.50,137.73) --
+	(160.81,137.68) --
+	(161.00,137.65) --
+	(161.51,137.57) --
+	(161.72,137.53) --
+	(162.22,137.45) --
+	(162.59,137.39) --
+	(162.86,137.34) --
+	(163.14,137.30) --
+	(164.91,137.00) --
+	(164.95,136.99) --
+	(164.97,136.99) --
+	(165.54,136.89) --
+	(165.88,136.83) --
+	(167.01,136.63) --
+	(167.08,136.62) --
+	(168.30,136.41) --
+	(168.51,136.37) --
+	(168.70,136.34) --
+	(171.04,135.92) --
+	(171.19,135.89) --
+	(171.75,135.79) --
+	(174.19,135.34) --
+	(174.88,135.21) --
+	(176.02,135.00) --
+	(179.30,134.37) --
+	(187.38,132.78);
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (397.48,198.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (120.37,189.74) {Residuals vs Fitted%
+};
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (198.74,198.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\node[color=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at (127.27, 59.70) {252%
+};
+
+\node[color=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at (124.65, 67.87) {408%
+};
+
+\node[color=drawColor,anchor=base west,inner sep=0pt, outer sep=0pt, scale=  0.75] at ( 74.53, 81.78) {137%
+};
+\end{scope}
+\begin{scope}
+\path[clip] ( 48.00, 48.00) rectangle (192.74,186.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.75,0.75,0.75}
+
+\draw[color=drawColor,dash pattern=on 1pt off 3pt ,line cap=round,line join=round,fill opacity=0.00,] ( 48.00,137.84) -- (192.74,137.84);
+\end{scope}
+\begin{scope}
+\path[clip] (246.74, 48.00) rectangle (391.48,186.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\end{scope}
+\begin{scope}
+\path[clip] (246.74, 48.00) rectangle (391.48,186.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (297.91,118.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (315.92,133.49) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (325.40,140.43) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (313.00,130.50) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (361.16,166.21) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (334.48,147.89) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (315.24,132.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (301.55,121.12) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (320.46,136.68) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (322.65,138.29) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (311.06,129.02) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (336.22,148.97) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (333.86,147.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (308.31,126.35) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (341.94,154.25) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (298.93,119.36) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (303.10,122.35) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (324.19,139.61) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (321.97,137.50) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (331.44,145.34) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (371.26,171.02) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (357.83,163.19) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (312.30,129.89) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (301.09,120.76) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (316.93,133.95) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (353.48,161.71) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (292.63,114.96) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (322.48,138.11) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (318.95,135.26) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (318.11,134.90) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (293.93,115.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (333.03,146.87) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (334.70,147.91) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (298.43,119.23) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (326.10,140.85) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (301.78,121.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (295.72,116.72) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (314.38,132.34) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (324.88,140.27) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (342.50,154.55) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (307.56,126.20) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (343.99,155.60) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (306.39,125.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (274.99, 97.80) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (294.54,115.99) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (343.38,155.19) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (293.29,115.37) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (346.98,158.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (287.22,110.52) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (335.34,148.28) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (296.01,116.95) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (281.11,102.35) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (338.80,152.16) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (318.78,135.25) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (298.17,119.18) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (304.78,124.12) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (365.77,168.83) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (306.59,125.85) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (358.58,165.08) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (295.43,116.52) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (282.43,105.04) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (276.08, 98.96) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (328.25,142.29) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (287.66,110.58) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (321.64,137.07) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (315.58,133.16) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (355.18,162.60) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (312.48,130.16) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (266.97, 82.18) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (346.62,158.00) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (343.09,155.07) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (288.94,111.23) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (292.96,115.25) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (364.43,168.58) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (330.86,144.75) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (320.12,136.45) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (325.93,140.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (331.64,145.49) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (319.78,136.12) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (316.09,133.54) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (329.73,143.14) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (319.95,136.16) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (322.82,138.34) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (336.00,148.67) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (335.56,148.57) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (305.40,124.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (320.96,136.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (300.39,120.22) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (320.62,136.69) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (351.48,160.29) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (348.48,159.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (299.43,119.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (307.17,125.98) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (325.23,140.41) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (327.71,142.13) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (298.68,119.25) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (311.24,129.07) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (319.45,135.55) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (296.57,117.22) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (310.34,128.54) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (325.75,140.59) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (328.07,142.27) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (309.80,128.19) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (342.22,154.52) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (342.79,154.61) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (323.33,138.81) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (299.92,120.09) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (294.24,115.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (300.16,120.18) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (340.84,153.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (349.28,159.49) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (289.75,112.06) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (326.63,141.01) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (295.14,116.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (264.16, 75.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (318.27,134.97) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (351.01,160.25) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (317.60,134.67) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (340.32,153.52) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (348.09,158.65) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (303.95,123.54) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (354.59,162.24) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (320.29,136.58) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (322.31,138.08) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (303.53,123.29) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (291.95,114.54) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (300.86,120.65) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (335.78,148.59) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (296.29,117.00) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (313.52,131.55) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (324.36,139.88) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (331.06,145.08) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (337.60,150.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (304.99,124.14) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (332.83,146.63) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (339.55,152.97) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (317.94,134.87) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (327.52,141.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (310.88,128.80) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (321.30,136.90) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (303.32,122.67) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (334.06,147.85) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (285.28,109.08) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (307.94,126.30) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (332.23,146.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (290.51,113.02) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (309.06,127.32) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (333.24,146.90) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (302.45,121.77) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (316.76,133.90) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (313.69,131.96) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (317.43,134.37) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (327.89,142.19) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (355.80,162.79) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (299.67,119.99) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (269.14, 83.93) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (314.90,132.65) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (278.84,102.05) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (302.00,121.69) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (306.78,125.87) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (328.43,142.33) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (291.60,113.84) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (312.13,129.83) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (280.40,102.33) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (323.16,138.49) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (329.35,142.92) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (306.19,125.49) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (311.95,129.62) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (315.07,132.76) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (378.11,171.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (352.44,160.66) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (297.65,118.42) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (328.80,142.51) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (348.88,159.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (337.13,150.00) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (286.28,110.17) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (270.93, 94.29) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (301.32,121.00) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (339.04,152.36) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (326.99,141.47) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (319.11,135.27) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (341.38,154.10) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (314.55,132.40) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (340.06,153.47) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (311.60,129.30) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (286.75,110.33) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (317.77,134.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (367.30,170.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (309.43,127.66) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (350.13,159.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (359.38,165.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (331.25,145.16) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (304.37,123.90) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (314.72,132.52) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (288.53,110.69) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (306.98,125.87) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (356.44,162.98) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (272.46, 94.94) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (311.77,129.36) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (302.67,121.79) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (326.28,140.88) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (252.10, 53.14) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (344.94,156.33) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (338.31,151.84) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (336.45,149.02) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (281.79,103.35) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (339.80,153.05) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (311.42,129.26) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (316.25,133.59) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (305.80,124.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (283.05,105.62) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (297.12,118.11) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (374.06,171.11) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (310.16,128.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (307.75,126.24) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (324.02,139.58) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (326.81,141.22) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (324.53,139.99) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (345.59,156.46) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (343.68,155.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (334.27,147.88) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (313.87,131.98) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (329.54,143.05) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (284.75,107.65) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (339.29,152.51) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (336.67,149.57) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (326.45,140.89) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (333.65,147.51) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (308.69,127.11) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (341.11,154.05) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (313.17,131.06) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (341.66,154.20) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (328.61,142.34) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (314.21,132.19) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (357.12,163.04) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (386.12,172.64) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (323.67,139.11) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (338.55,152.03) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (322.99,138.48) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (317.10,134.20) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (345.93,156.81) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (321.13,136.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (330.10,144.04) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (310.52,128.64) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (317.27,134.32) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (354.02,161.89) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (300.63,120.31) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (351.95,160.61) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (349.70,159.67) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (332.63,146.63) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (308.50,126.74) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (285.78,109.21) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (314.04,131.99) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (335.13,148.11) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (312.83,130.49) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (337.36,150.12) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (293.61,115.51) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (344.62,155.87) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (369.09,170.71) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (328.98,142.76) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (362.15,167.39) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (344.30,155.87) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (345.26,156.43) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (350.56,160.08) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (318.61,135.15) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (277.99,101.17) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (309.98,128.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (307.36,126.09) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (306.00,124.75) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (315.41,132.89) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (340.58,153.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (309.61,128.01) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (308.13,126.34) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (330.29,144.14) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (360.24,166.07) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (273.80, 95.70) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (316.42,133.78) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (312.65,130.41) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (313.35,131.08) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (334.91,148.07) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (338.07,151.31) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (310.70,128.70) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (289.35,111.86) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (347.34,158.42) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (346.27,156.98) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (347.72,158.60) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (284.20,107.06) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (288.10,110.64) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (309.25,127.45) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (319.28,135.45) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (323.85,139.18) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (336.90,149.96) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (321.47,136.98) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (290.13,112.54) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (302.89,122.10) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (277.07,100.83) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (330.67,144.66) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (327.17,141.52) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (299.18,119.51) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (329.91,143.42) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (308.87,127.15) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (330.48,144.62) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (337.83,150.64) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (363.23,168.01) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (333.44,146.95) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (292.30,114.62) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (283.64,106.09) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (320.79,136.72) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (325.58,140.45) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (352.95,161.69) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (325.05,140.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (290.88,113.10) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (305.60,124.58) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (304.58,123.90) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (297.38,118.23) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (291.25,113.38) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (323.50,138.94) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (327.35,141.72) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (316.59,133.83) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (332.43,146.44) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (279.64,102.09) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (321.80,137.19) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (305.19,124.17) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (296.84,117.36) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (324.71,140.03) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (329.17,142.82) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (331.84,146.07) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (260.12, 62.36) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (315.75,133.32) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (304.16,123.75) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (303.74,123.53) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (319.62,135.82) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (318.44,135.03) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (332.03,146.30) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (322.14,137.95) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (294.84,116.08) circle (  2.25);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (302.23,121.69) circle (  2.25);
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (397.48,198.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (251.45, 48.00) -- (386.78, 48.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (251.45, 48.00) -- (251.45, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (274.01, 48.00) -- (274.01, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (296.56, 48.00) -- (296.56, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (319.11, 48.00) -- (319.11, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (341.67, 48.00) -- (341.67, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (364.22, 48.00) -- (364.22, 42.00);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (386.78, 48.00) -- (386.78, 42.00);
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (251.45, 25.20) {-3%
+};
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (274.01, 25.20) {-2%
+};
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (296.56, 25.20) {-1%
+};
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (319.11, 25.20) {0%
+};
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (341.67, 25.20) {1%
+};
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (364.22, 25.20) {2%
+};
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (386.78, 25.20) {3%
+};
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (246.74, 60.98) -- (246.74,171.89);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (246.74, 60.98) -- (240.74, 60.98);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (246.74, 79.47) -- (240.74, 79.47);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (246.74, 97.95) -- (240.74, 97.95);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (246.74,116.44) -- (240.74,116.44);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (246.74,134.92) -- (240.74,134.92);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (246.74,153.41) -- (240.74,153.41);
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (246.74,171.89) -- (240.74,171.89);
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (235.94, 60.98) {-4%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (235.94, 79.47) {-3%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (235.94, 97.95) {-2%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (235.94,116.44) {-1%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (235.94,134.92) {0%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (235.94,153.41) {1%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (235.94,171.89) {2%
+};
+
+\draw[color=drawColor,line cap=round,line join=round,fill opacity=0.00,] (246.74, 48.00) --
+	(391.48, 48.00) --
+	(391.48,186.74) --
+	(246.74,186.74) --
+	(246.74, 48.00);
+\end{scope}
+\begin{scope}
+\path[clip] (198.74,  0.00) rectangle (397.48,198.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (319.11, 12.00) {Theoretical Quantiles%
+};
+
+\node[rotate= 90.00,color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (222.74,117.37) {Standardized residuals%
+};
+\end{scope}
+\begin{scope}
+\path[clip] (246.74, 48.00) rectangle (391.48,186.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.50,0.50,0.50}
+
+\draw[color=drawColor,dash pattern=on 1pt off 3pt ,line cap=round,line join=round,fill opacity=0.00,] (246.74, 77.81) -- (391.48,193.61);
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (397.48,198.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\node[color=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.00] at (319.11,189.74) {Normal Q-Q%
+};
+\end{scope}
+\begin{scope}
+\path[clip] (198.74,  0.00) rectangle (397.48,198.74);
+\definecolor[named]{drawColor}{rgb}{0.75,0.39,0.77}
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\node[color=drawColor,anchor=base west,inner sep=0pt, outer sep=0pt, scale=  0.75] at (255.10, 53.14) {252%
+};
+
+\node[color=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at (257.12, 62.36) {408%
+};
+
+\node[color=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.75] at (261.16, 75.86) {137%
+};
+\end{scope}
+\end{tikzpicture}
